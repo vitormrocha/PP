@@ -1,0 +1,891 @@
+Ex 1
+#include <stdio.h>
+#include <math.h>
+int main (){
+
+    int numeint;
+    printf ("Digite um numero inteiro\n");
+    scanf ("%d", &numeint);
+    printf("O numero eh: %d", numeint);
+
+    return 0;
+
+
+}
+
+Ex2 
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float numr;
+    printf ("Digite um numero real\n");
+    scanf ("%f", &numr);
+    printf("O numero eh: %.2f", numr);
+
+    return 0;
+
+
+}
+
+Ex 3
+#include <stdio.h>
+#include <math.h>
+int main (){
+    int num1, num2, num3, soma;
+    printf ("Digite tres numeros inteiros\n");
+    scanf ("%d %d %d", &num1, & num2, &num3);
+    soma = num1 + num2 + num3;
+    printf("O numero eh: %d", soma);
+
+    return 0;
+
+
+}
+ 
+ Ex 4:
+
+ #include <stdio.h>
+#include <math.h>
+ int main (){
+    float num, pot;
+    printf ("Digite um numero real\n");
+    scanf ("%f", &num);
+    pot = num*num;
+    printf("O quadrado desse numero eh: %.2f", pot);
+
+    return 0;
+
+
+}
+ 
+Ex 5
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float num, quo;
+    printf ("Digite um numero real\n");
+    scanf ("%f", &num);
+    quo = num/5;
+    printf("A quinta parte desse numero eh: %.2f", quo);
+
+    return 0;
+
+
+}
+
+Ex 6
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float temp, fhrt;
+    printf ("Apresente um valor em celsius\n");
+    scanf ("%f", &temp);
+    fhrt = (temp * 9/5) + 32;
+    printf("Essa temperatura em fahrenheit: %.2f", fhrt);
+
+    return 0;
+	
+	
+
+
+}
+
+Ex 7
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float tempf, tempc;
+    printf ("Apresente um valor em fahrenheit\n");
+    scanf ("%f", &tempf);
+    tempc = 5 * (tempf - 32)/9;
+    printf("Essa temperatura em celsius eh: %.2f", tempc);
+
+    return 0;
+
+
+}
+
+Ex 8 
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float kel, cel;
+    printf ("Apresente um valor em kel\n");
+    scanf ("%f", &kel);
+    cel = kel - 273.15;
+    printf("Essa temperatura em celsius eh: %.2f", cel);
+
+    return 0;
+
+
+}
+
+Ex 9 
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float cel, kelv;
+    printf ("Apresente um valor em celsius\n");
+    scanf ("%f", &cel);
+    kelv = cel + 273.15;
+    printf("Essa temperatura em kelvin eh: %.2f", kelv);
+
+    return 0;
+
+
+}
+
+Ex 10
+#include <stdio.h>
+#include <math.h>
+int main (){
+    float kms, ms ;
+    printf ("Apresente uma velocidade em quilometros: \n");
+    scanf ("%f", &kms);
+    ms = kms/3.6;
+    printf("Essa velocidade em metros por segundos e: %.2f", ms);
+
+    return 0;
+
+
+}
+
+Ex 11 #include <stdio.h>
+#include <math.h>
+int main (){
+    float kms, ms ;
+    printf ("Apresente uma velocidade em metros por segundo: \n");
+    scanf ("%f", &ms);
+    kms = ms*3.6;
+    printf("Essa velocidade em quilometros eh: %.2f", kms);
+
+    return 0;
+
+
+}
+
+Ex 12 #include <stdio.h>
+#include <math.h>
+int main (){
+    float dist, dk;
+    printf ("Apresente uma distancia em dm\n");
+    scanf ("%f", &dist);
+    dk = 1.61*dist;
+    printf("Essa distancia em dk e igual a: %.2f", dk);
+
+    return 0;
+
+
+}
+
+Ex 13 #include <stdio.h>
+#include <math.h>
+int main (){
+    float dist, dks;
+    printf ("Apresente uma distancia em dk\n");
+    scanf ("%f", &dks);
+    dist = dks/1.61;
+    printf("Essa distancia em dm eh: %.2f", dist);
+
+    return 0;
+
+
+}
+
+Ex 14 #include <stdio.h>
+#include <math.h>
+int main (){
+    float Gr, Ra, pi;
+    pi = 3.14159;
+    printf ("Apresente um valor de angulo em graus\n");
+    scanf ("%f", &Gr);
+    Ra = Gr * pi/180;
+    printf("Esse valor em radianos e igual a: %.5f", Ra);
+
+    return 0;
+
+
+}
+
+Ex 15 #include <stdio.h>
+#include <math.h>
+int main (){
+    float Gr, Ra, pi;
+    pi = 3.14159;
+    printf ("Apresente um valor de angulo em radianos\n");
+    scanf ("%f", &Ra);
+    Gr = Ra * 180/pi;
+    printf("Esse valor em graus e igual a: %.5f", Gr);
+
+    return 0;
+
+
+}
+
+
+
+Ex 16: #include <stdio.h>
+#include <math.h>
+
+int main(){
+    float pole, cm;
+    printf("Apresente um valor em polegadas");
+    scanf ("%f", &pole);
+    cm= pole*2.54;
+    printf("Esse valor em centimetros e igual a: %.2f", cm);
+
+    return 0;
+
+
+}
+
+Ex 17: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float pole, cm;
+        printf ("apresente um valor em centimetros");
+        scanf ("%f",&cm);
+        pole= cm/2.54;
+        printf("Esse valor em polegadas e igual a: %f", pole);
+
+        return 0;
+
+
+}
+
+Ex 18: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float vol, lit;
+        printf("apresente um valor em metros cubicos: ");
+        scanf ("%f", &vol);
+        lit= 1000*vol;
+        printf("Esse valor em litros equivale a: %.2f", lit);
+
+
+        return 0;
+
+
+}
+
+Ex 19: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float vol, lit;
+        printf("apresente um valor em litros: ");
+        scanf ("%f", &lit);
+        vol= lit/1000;
+        printf("Esse valor em metros cubicos equivale a: %.2f", vol);
+
+
+        return 0;
+
+
+}
+
+Ex 20: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float kg, lib;
+        printf("Apresente um valor em quilogramas: ");
+        scanf("%f", &kg);
+        lib= kg/0.45;
+        printf("Esse valor em libras e igual a: %f", lib);
+
+
+
+        return 0;
+
+
+}
+
+Ex 21: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float kg, lib;
+        printf("Apresente um valor de massa em libras: ");
+        scanf("%f", &lib);
+        kg= lib * 0.45;
+        printf("Esse valor em quilogramas e igual a: %f", kg);
+
+
+
+        return 0;
+
+
+}
+
+Ex 22: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float jard, met;
+        printf("Apresente um valor em jardas: ");
+        scanf ("%f", &jard);
+        met= jard * 0.91;
+        printf ("Esse valor em metros equivale a: %.2f", met);
+
+
+
+        return 0;
+
+
+}
+
+Ex 23: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float jard, met;
+        printf("Apresente um valor em metros: ");
+        scanf ("%f", &met);
+        jard= met/0.91;
+        printf ("Esse valor em jardas equivale a: %.2f", jard);
+
+
+
+        return 0;
+
+
+}
+
+Ex 24: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float metq, acres;
+        printf ("Apresente o valor de uma area em metros quadrados: ");
+        scanf("%f", &metq);
+        acres= metq * 0.000247;
+        printf ("Esse valor em acres e igual a: %.6f", acres);
+
+
+        return 0;
+
+
+}
+
+Ex 25: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float metq, acres;
+        printf ("Apresente o valor de uma area em acres: ");
+        scanf("%f", &acres);
+        metq= acres * 4048.58;
+        printf ("Esse valor em metros quadrados e igual a: %.2f", metq);
+
+
+        return 0;
+
+
+}
+
+Ex 26: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float metq, hec;
+        printf ("Apresente o valor de uma area em metros quadrados: ");
+        scanf("%f", &metq);
+        hec= metq* 0.0001;
+        printf ("Esse valor em hectares e igual a: %.4f", hec);
+
+
+        return 0;
+
+
+}
+
+Ex 27: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float metq, hec;
+        printf ("Apresente o valor de uma area em hectares: ");
+        scanf("%f", &hec);
+        metq= hec* 1000;
+        printf ("Esse valor em metros quadrados e igual a: %.2f", metq);
+
+
+        return 0;
+
+
+}
+
+Ex 28: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float val1,val2,val3, resul;
+        printf("Apresente tres valores: ");
+        scanf("%f %f %f", &val1, &val2, &val3);
+        resul= (val1*val1) + (val2*val2) + (val3*val3);
+        printf ("A soma dos quadrados dos tres valores apresentados e igual a: %.1f", resul);
+
+        return 0;
+
+}
+
+Ex 29: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float val1,val2,val3, val4, med;
+        printf("Apresente quatro valores: ");
+        scanf("%f %f %f %f", &val1, &val2,&val3, &val4);
+        med=(val1 + val2 + val3+ val4)/4;
+        printf ("A media desses quatro valores e: %.2f", med);
+
+        return 0;
+
+}
+
+Ex 30: #include <stdio.h>
+#include <math.h>
+
+int main(){
+        float  R, USD, resul;
+        printf("Apresente um valor em real: ");
+        scanf("%f", &R);
+        USD= 5.29; //esse e o valor atual
+        resul= R * USD;
+        printf("Esse valor em dolares e igual a: %.2f", resul);
+
+
+        return 0;
+
+}
+
+Ex 31: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, ant, suc;
+    printf(" Apresente um numero inteiro: ");
+    scanf("%D", &num);
+    ant= num-1;
+    suc=num+1;
+    printf(" O antecessor desse numero e: %d \n", ant);
+    printf("O sucessor desse numero e: %d \n", suc);
+
+        return 0;
+
+}
+
+Ex 32: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, ant, suc, soma;
+    printf(" Apresente um numero inteiro: ");
+    scanf("%D", &num);
+    ant=(num * 2)- 1;
+    suc= (num * 3) + 1;
+    soma= ant + suc;
+    printf(" O antecessor desse numero e: %d \n", ant);
+    printf("O sucessor desse numero e: %d \n", suc);
+    printf("A soma desses valores e: %d", soma);
+
+        return 0;
+
+}
+
+Ex 33: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float lad, area;
+    printf(" Apresente um valor do lado de um quadrado");
+    scanf("%f", &lad);
+    area= lad * lad;
+    printf(" A area desse quadrado e igual a: %.2f", area);
+        return 0;
+
+}
+
+Ex 34: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float R, area, pi;
+    pi= 3.141592;
+    printf(" Apresente um valor de um raio de um circulo: ");
+    scanf("%f", &R);
+    area= pi * ( R * R);
+    printf(" A area desse circulo e igual a: %.6f", area);
+        return 0;
+
+}
+
+Ex 35: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, hip;
+    printf(" Apresente os catetos de um triangulo");
+    scanf("%f %f",&a, &b);
+    hip = sqrt((a*a)+(b*b));
+    printf(" A hipotenusa e igual a: %f", hip);
+        return 0;
+
+}
+
+Ex 36: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float H, vol, R, pi;
+    pi= 3.141592;
+    printf(" Apresente a altura e o raio de um cilindro: ");
+    scanf("%f %f", &H, &R);
+    vol= pi * (R * R) * H;
+    printf(" O volume do cilindro e igual a: %.6f", vol);
+        return 0;
+
+}
+
+Ex 37: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float prod, desc;
+    printf(" Apresente um valor de um produto: ");
+    scanf("%f", &prod);
+    desc= prod * 0.88;
+    printf(" O valor com o desconto e: %.2f", desc);
+        return 0;
+
+}
+
+Ex 39: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float g1, g2, g3, val;
+    val= 780000;
+    g1= val * 0.46;
+    g2= val * 0.32;
+    g3= val* 0.22;
+    printf(" O valor que o primeiro ganhador recebeu e: %.2f \n", g1);
+    printf("O valor que o segundo ganhador recebeu e: %.2f \n", g2);
+    printf("O valor que o terceiro ganhador recebeu e: %.2f \n", g3);
+
+        return 0;
+
+}
+
+Ex 38: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float sal, aument;
+    printf ("O valor do salario de um funcionario x e: ");
+    scanf ("%f", &sal);
+    aument= sal* 1.25;
+    printf("O aumento do salario e: %.2f", aument);
+
+        return 0;
+
+}
+
+Ex 40: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float salenc, dias, val;
+    salenc= 30 * 0.92;
+    printf ("Apresente a quantidade de dias que o encanador trabalhou; ");
+    scanf ("%f", &dias);
+    val= salenc * dias;
+    printf("O salario a ser recebido e: %.2f", val);
+
+        return 0;
+
+}
+
+Ex 41: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float h, hmes, pag;
+    printf ("Apresente a quantidade de horas trabalhadas por um funcionario: \n ");
+    scanf("%f", &h);
+    printf("Apresente a quantidade de horas trabalhadas por esse funcionario no mes: \n");
+    scanf ("%f", &hmes);
+    pag= (h * hmes) * 1.10;
+    printf("O salario a ser recebido e: %.2f", pag);
+
+        return 0;
+
+}
+
+***Ex 42: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float sal, imp, salf;
+    printf("Apresente o salario de um funcionario x a ser recebido: ");
+    scanf("%f", &sal);
+    salf= sal + (sal*1.05) - (sal * 0.07);
+    printf("O salario a ser recebido e igual a: %.2f", salf);
+
+    return 0;
+
+}
+
+Ex 43: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float valtot, val, desc, parc, com, comp;
+    printf("Apresente o valor total: ");
+    scanf("%f", &valtot);
+
+    desc= (valtot* 0.10);
+    val= valtot - desc;
+    parc= valtot/3 ;
+    com= val*0.05;
+    comp= valtot*0.05;
+
+    printf("\nValor  a ser pago com o desconto de 10% : R$%.2f", val);
+    printf("\nValor a ser pago do parcelamento sem juros: R$%.2f", parc);
+    printf("\nO valor da comissao: R$%.2f", com);
+    printf("\n comissao parcelada: R$%.2f", comp);
+
+
+    return 0;
+
+}
+
+Ex 44: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    float degrau, obj;
+
+    printf("Qual a altura que voce quer alcancar na escada, sabendo que cada degrau mede 2 cm? ");
+    scanf("%f", &obj);
+    degrau= 2;
+    obj= obj/degrau;
+    printf("Para alcancar seu objetivo, voce devera subir %.2f escadas", obj);
+
+
+    return 0;
+
+}
+
+Ex 45: #include <stdio.h>
+#include <math.h>
+
+int main() {
+    char letra, minus;
+    printf("Digite uma letra maiuscula: ");
+    scanf("%c", &letra);
+    minus= letra + 32;
+    printf("Essa letra em formato minusculo e: %c", minus);
+
+
+
+    return 0;
+
+}
+
+Ex 46: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        int num, num1, num2,num3;
+        printf("Digite um numero inteiro positivo de tres digitos (de 100 a 999): ");
+        scanf("%d", &num);
+        if (num > 10) {
+        num1= num%10;
+        num=num/10;
+        num2=num%10;
+        num=num/10;
+        num3= num%10;
+        }
+        printf ("\nEsse numero invertido e igual a: %d%d%d", num1, num2, num3);
+
+
+
+    return 0;
+
+}
+
+Ex 47: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        int num, num1, num2, num3, num4;
+        printf("Digite um numero inteiro de 4 digitos (1000 a 9999): ");
+        scanf("%d", &num);
+        num1= num%10;
+        num2= (num%100)/10;
+        num3= (num%1000)/100;
+        num4= (num%10000)/1000;
+
+        printf("\n %d", num1);
+        printf("\n %d", num2);
+        printf("\n %d", num3);
+        printf("\n %d", num4);
+
+
+
+    return 0;
+
+}
+
+Ex 48: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        int seg, min, hor;
+        printf("Informe um numero em segundos");
+        scanf("%d", &seg);
+        hor= seg / 3600;
+        min=(seg-(hor*3600))/60;
+        seg= seg- (hor*3600)-(min*60);
+
+        printf("Esse valor em horas, minutos e segundos e: %d %d %d", hor, min, seg);
+
+
+    return 0;
+
+}
+ 
+ Ex 49: #include <stdio.h>
+#include <math.h>
+
+int main() {
+        int s1,m1,h1,dur1, hfin, sfin, mfin, hf, mf, sf;
+        printf("Digite o horario. Informe os dados do inico da experiencia em horas, minutos, e segundos: ");
+        scanf("%d %d %d", &h1, &m1, &s1);
+        printf("Qual a duracao da experiencia em segundos: ");
+        scanf ("%d", &dur1);
+        hfin= dur1/3600;
+        mfin= (dur1%3600) / 60;
+        sfin= (dur1%3600)%60;
+        hf= h1 + hfin;
+        mf= mfin + m1;
+        sf= sfin + s1;
+
+
+
+
+        printf("\n A experiencia terminara as: %d horas %d minutos %d segundos", hf, mf, sf);
+
+        return 0;
+}
+
+
+Ex 50: #include <stdio.h>
+#include <math.h>
+
+int main() {
+       int idade, anoatual, anonasc;
+        printf("Informe a sua idade: ");
+        scanf("%d",&idade);
+        printf("Informe o ano atual");
+        scanf("%d", &anoatual);
+        anonasc= anoatual - idade;
+
+        printf("O ano do seu nascimento e: %d", anonasc);
+
+
+
+
+        return 0;
+}
+
+
+
+Ex 51: #include <stdio.h>
+#include <math.h>
+
+int main() {
+
+     float xa, xb,ya,yb, xpot, ypot, dist;
+     printf("Informe as coordenadas do ponto x: \n");
+     scanf("%f %f", &xa, &xb);
+     printf ("Informe as coordenadas do pontoy: \n");
+     scanf("%f %f", &ya, &yb);
+     xpot= xa - xb;
+     ypot= ya - yb;
+     dist= sqrt ((xpot*xpot)+(ypot*ypot));
+
+
+     printf("A distancia dos pontos ate a origem e: %f", dist);
+
+
+
+        return 0;
+}
+
+Ex 52: #include <stdio.h>
+#include <math.h>
+
+int main (){
+        float amgA, amgB, amgC, premio, invA, invB, invC, invtot, premioA, premioB, premioC;
+
+        printf("Qual o valor que o amigo A investiu? \n");
+        scanf("%f", &amgA);
+        printf("Qual o valor que o amigo B investiu? \n");
+        scanf("%f", &amgB);
+        printf ("Qual o valor que o amigo C investiu? \n");
+        scanf ("%f", &amgC);
+        printf("Qual o valor do premio? \n");
+        scanf ("%f", &premio);
+
+        invtot= amgA + amgB + amgC;
+        invA= (amgA * 100)/invtot;
+        invB= (amgB * 100)/invtot;
+        invC= (amgC * 100)/invtot;
+        premioA= premio * invA / 100;
+        premioB= premio * invB/100;
+        premioC = premio * invC/100;
+
+
+        printf("O amigo A ira aproveitar de: %.1f porcento do premio.\n", premioA);
+        printf("O amigo B ira aproveitar de: %.1f porcento do premio.\n", premioB);
+        printf("O amigo C ira aproveitar de: %.1f porcento do premio.\n", premioC);
+
+        return 0;
+
+} 
+
+Ex 53: 
+#include <stdio.h>
+#include <math.h>
+
+int main (){
+        float comp, larg, preco, custo, perim;
+
+        printf("Informe o valor do comprimento: \n");
+        scanf("%f", &comp);
+        printf("Informe o valor da largura: \n");
+        scanf("%f", &larg);
+        printf("Informe o preco do metro de tela p: \n");
+        scanf("%f", &preco);
+
+        perim= comp + larg;
+        custo= preco * perim;
+
+        printf("O custo para cerrar esse terreno com a tela e igual a: R$%.1f", custo);
+
+
+
+        return 0;
+
+}
+
+
+
