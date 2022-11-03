@@ -1,0 +1,1166 @@
+Ex 1: #include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num1, num2;
+    printf("Digite dois numeros: ");
+    scanf ("%d %d", &num1, &num2 );
+    if (num1> num2){
+        printf("O primeiro numero e maior");
+
+    }
+    else {
+        printf("O segundo numero e maior");
+    }
+
+    return 0;
+}
+
+Ex 2: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    float num1;
+    printf ("Digite um numero: ");
+    scanf ("%f", &num1);
+
+    if (num1>= 0){
+            num1= sqrt(num1);
+            printf ("A raiz quadrada desse numero eh: %.1f", num1);
+    }
+    else {
+        printf("O numero e invalido.");
+    }
+    return 0;
+}
+
+Ex 3: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    float num1;
+    printf ("Digite um numero: ");
+    scanf ("%f", &num1);
+
+    if (num1>= 0){
+            num1= sqrt(num1);
+            printf ("A raiz quadrada desse numero eh: %.1f", num1);
+    }
+    else {
+        num1= num1*num1;
+        printf("A raiz quadrada desse numero eh: %.1f", num1);
+    }
+    return 0;
+}
+
+Ex 4: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    float num1, raiz, pot;
+    printf ("Digite um numero: ");
+    scanf ("%f", &num1);
+
+    if (num1>0){
+            pot= num1*num1;
+            raiz= sqrt(num1);
+            printf ("A potencia desse numero ao quadrado eh: %.1f \n", pot);
+            printf("A raiz desse numero eh: %.1f", raiz);
+    }
+    else {
+            printf("O numero e invalido.");
+    }
+    return 0;
+}
+
+Ex 5:
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int num1, resto;
+        printf("Digite um numero: ");
+        scanf ("%d", &num1);
+        resto= num1%2;
+
+        if (resto == 0) {
+            printf ("Esse numero eh par");
+
+        }
+        else {
+
+        printf("Esse numero eh impar");
+        }
+
+
+    return 0;
+}
+
+Ex 6: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int num1, num2, dif, dif2;
+        printf("Digite dois numeros: ");
+        scanf ("%d %d", &num1, &num2);
+
+
+        if (num1>num2) {
+            printf (" O numero maior eh: %d \n", num1);
+            dif= num1 - num2;
+            printf("A diferenca entre esses numeros eh: %d", dif);
+
+        }
+        else {
+
+        printf("O numero maior eh: %d \n", num2);
+        dif2= num2-num1;
+        printf ("A diferenca entre esses numeros eh: %d", dif2);
+        }
+
+
+    return 0;
+}
+
+Ex 7: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int num1, num2;
+        printf("Digite dois numeros: ");
+        scanf ("%d %d", &num1, &num2);
+
+
+        if (num1>num2) {
+            printf (" O numero maior eh: %d \n", num1);
+
+        }
+
+        if (num1 == num2) {
+            printf("Numeros iguais");
+
+        }
+        if (num2>num1) {
+
+        printf("O numero maior eh: %d \n", num2);
+        }
+
+
+    return 0;
+}
+
+Ex 8: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float not1, not2, med;
+    printf("Apresente a nota 1: ");
+    scanf("%f", &not1);
+    med= not1+not2/2;
+
+    if (not1 >0 && not1<=10) {
+
+        printf("A nota 1 eh valida \n");
+
+    }
+    if (not1<0) {
+
+        printf ("A nota 1 nao e valida");
+    }
+    if (not1>10) {
+
+        printf ("A nota 1 nao e valida");
+
+    }
+    printf ("\nApresente a segunda nota: ");
+    scanf ("%f", &not2);
+
+    if (not2>0 && not2<=10) {
+        printf("A nota 2 eh valida: \n");
+        printf("A media dessas duas notas eh: %.1f", med);
+    }
+    if (not2<0) {
+        printf ("A nota 2 nao eh valida");
+    }
+    if (not2>10) {
+        printf ("A nota 2 nao eh valida");
+    }
+
+
+    return 0;
+
+}
+Ex 9: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float salario, prest;
+    printf ("Apresente o salario de um funcionario: ");
+    scanf("%f", &salario);
+    printf ("\nApresente o valor da prestacao de um emprestimo: ");
+    scanf ("%f", &prest);
+
+    if (prest> (1.20 * salario)){
+        printf ("Emprestimo nao concedido. ");
+    } else {
+        printf ("Emprestimo concedido");
+    }
+    return 0;
+
+}
+
+Ex 10: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float alt, peso;
+    char sex;
+    printf ("Apresente a sua altura: ");
+    scanf ("%f", &alt);
+    printf ("Apresente o seu sexo. Digite F para feminino ou M para masculino: ");
+    sex= getchar ();
+    scanf ("%c", &sex);
+
+    if (sex == 'F') {
+        peso= (62.1*alt)-44.7;
+        printf("\nO seu peso ideal eh: %.1f", peso);
+    }
+    if (sex == 'M') {
+        peso= (72.1*alt)-58.0;
+        printf("\nO seu peso ideal eh: %.1f", peso);
+    }
+    return 0;
+}
+
+Ex 11: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int num, num1, num2, num3, soma, soma2;
+   printf ("Apresente um numero inteiro: \n");
+   scanf ("%d", &num);
+
+   if (num>10) {
+    num1= num%10;
+    num= num/10;
+    num2= num%10;
+    num=num/10;
+    soma= num1 + num2;
+    printf ("A soma dos algarismos eh: %d", soma);
+
+
+}
+    if (num <= 0) {
+        printf(" Numero invalido.");
+    } if (num>100){
+        num1= num%10;
+    num= num/10;
+    num2= num%10;
+    num=num/10;
+    num3= num%10;
+    num=num/10;
+    soma2= num1 + num2 + num3;
+    printf ("A soma dos algarismos eh: %d", soma2);
+    }
+
+
+    return 0;
+}
+
+Ex 12: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int numero, loga;
+   printf ("Apresente um numero: ");
+   scanf ("%d", &numero);
+
+   if (numero>0) {
+    loga= log10(numero);
+    printf ("\nO logaritmo desse numero eh: %d", loga);
+
+   } else {
+       printf ("\n Numero invalido");
+
+   }
+
+    return 0;
+}
+
+Ex 13: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   float not1, not2, not3, mediap;
+   printf ("Apresente a nota de um aluno em tres provas: ");
+   scanf ("%f %f %f", &not1, &not2, &not3);
+   mediap= (not1*1.0) + (not2*1.0) + (not3 * 2.0)/(1.0 + 1.0 + 2.0);
+
+   if (mediap>= 60) {
+    printf ("\nA media eh: %.1f, aluno aprovado!", mediap);
+   } else {
+   printf ("\n,A media eh: %.1f, aluno nao aprovado.", mediap);
+   }
+
+   return 0;
+}
+
+Ex 14: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   float lab, avals, exam, mediap;
+   printf ("Apresente as notas de um aluno na atividade do laboratorio, no exame semestral, e no exame semestral : ");
+   scanf ("%f %f %f", &lab, &avals, &exam);
+   mediap= (lab*2.0) + (avals*3.0) + (exam * 5.0)/10;
+
+   if (mediap<= 2.9 && mediap>=0) {
+    printf ("\nA media eh: %.1f, aluno reprovado.", mediap);
+   } if (mediap >= 3.0 && mediap <= 4.9) {
+       printf ("\nA media eh: %.1f, aluno de recuperacao. ", mediap);
+
+   } if (mediap >= 5.0) {
+        printf ("\n A media eh: %.1f, aluno aprovado!", mediap);
+   }
+
+   return 0;
+}
+
+Ex 15: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int numsem;
+   printf ("Digite um numero inteiro entre 1 e 7: ");
+   scanf ("%d", &numsem);
+   switch( numsem ){
+   case 1 : printf ("O dia da semana correspondente eh: Domingo"); break;
+   case 2 : printf ("O dia da semana correspondente eh: Segunda"); break;
+   case 3 : printf ("O dia da semana correspondente eh: Terca"); break;
+   case 4: printf ("O dia da semana correspondente eh: Quarta"); break;
+   case 5: printf ("O dia da semana correspondente eh: Quinta"); break;
+   case 6: printf ("O dia da semana correspondente eh: Sexta"); break;
+   case 7: printf ("O dia da semana correspondente eh: Sabado"); break;
+   default: printf ("Numero invalido."); break;
+
+   }
+   return 0;
+}
+
+Ex 16: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int numsem;
+   printf ("Digite um numero inteiro entre 1 e 12: ");
+   scanf ("%d", &numsem);
+   switch( numsem ){
+   case 1 : printf ("O mes correspondente eh: Janeiro"); break;
+   case 2 : printf ("O mes eh: Fevereiro"); break;
+   case 3 : printf ("O mes correspondente eh: Marco"); break;
+   case 4: printf ("O mes correspondente eh: Abril"); break;
+   case 5: printf ("O mes correspondente eh: Maio"); break;
+   case 6: printf ("O mes correspondente eh: Junho"); break;
+   case 7: printf ("O mes correspondente eh: Julho"); break;
+   case 8: printf("O mes correspondente eh: Agosto"); break;
+   case 9: printf("O mes correspondente eh: Setembro"); break;
+   case 10: printf("O mes correspondente eh: Outubro"); break;
+   case 11: printf ("O mes correspondente eh: Novembro"); break;
+   case 12: printf ("O mes correspondente eh: Dezembro"); break;
+   default: printf ("Numero invalido."); break;
+
+   }
+   return 0;
+}
+
+Ex 17:#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   float basema, basem, alt, trape;
+   printf("Apresente o valor da base maior de um trapezio: ");
+   scanf ("%f", &basema);
+   printf("\nApresente o valor da base menor de um trapezio:");
+   scanf ("%f", &basem);
+   printf ("\nApresente o valor da altura desse trapezio: ");
+   scanf ("%f", &alt);
+   trape= ((basema + basem)*alt)/2;
+
+   printf ("\nO valor da area desse trapezio eh: %.1f", trape);
+
+   return 0;
+}
+
+
+Ex 18:
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int num, num1, num2, add,sub,multi,divi;
+   printf ("Digite um numero entre 1 e 4 para escolher uma operacao a ser realizada. ");
+   printf ("\n1: Adicao \n2: Subtracao \n3: Multiplicacao \n4: Divisao. \n");
+   scanf("%d", &num);
+   switch( num ){
+   case 1:
+       printf ("Adicao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num1, &num2);
+       add= num1 + num2;
+       printf ("O resultado eh: %d", add); break;
+   case 2:
+       printf ("Subtracao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num1, &num2);
+       sub= num1 - num2;
+       printf("O resultado eh: %d", sub); break;
+   case 3:
+       printf ("Multiplicacao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num1, &num2);
+       multi= num1 * num2;
+       printf("O resultado eh: %d", multi); break;
+   case 4:
+    printf ("Divisao selecionada. Selecione dois numeros: ");
+    scanf ("%d %d", &num1, &num2);
+    if (num2 == 0) {
+    printf ("Operacao invalida."); break;
+    } else {
+	divi= num1/num2;
+        printf ("O resultado eh: %d", divi);
+   } break;
+   default: printf ("Numero invalido."); break;
+}
+    return 0;
+}
+
+Ex 19: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int num, num3, num5;
+   printf ("Apresente um numero inteiro: ");
+   scanf ("%d", &num);
+   num3= num%3;
+   num5= num%5;
+
+   if (num3 == 0) {
+    printf ("\nO numero e divisivel por 3.");
+   } else {
+   printf ("\nO numero nao e divisvel por 3.");
+   }
+   if (num5 == 0) {
+    printf ("\nO numero e divisel por 5.");
+   }else {
+   printf ("\nO numero nao e divisivel por 5");
+   }
+   if (num3 == 0 && num5==0) {
+    printf ("\nO numero e divisel por 3 e 5");
+   } else {
+   printf ("\nO numero nao e divisel por 3 e 5");
+   }
+   return 0;
+}
+
+Ex 20: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int val, val2, val3;
+   printf("Digite os valores de tres lados de um triangulo: ");
+   scanf ("%d %d %d", &val, &val2, &val3);
+
+   if (val == val2 && val2 == val3 && val == val3) {
+    printf("\nEsse triangulo e equilatero. ");
+
+   } if (val!=val2 && val2!=val3 && val!=val3) {
+   printf ("\nEsse triangulo eh escaleno.");
+   }
+   if (val == val2 && val2!= val3 && val!= val3) {
+
+    printf ("\nEsse trianglo e isosceles.");
+   }
+   return 0;
+}
+
+Ex 21:  #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int val, num, num2, add,sub,multi,divi;
+   printf ("Digite um numero entre 1 e 4 para escolher uma operacao a ser realizada. ");
+   printf ("\n1: Adicao \n2: Subtracao \n3: Multiplicacao \n4: Divisao. \n");
+   scanf("%d", &val);
+   switch( val ){
+   case 1:
+       printf ("Adicao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num, &num2);
+       add= num + num2;
+       printf ("O resultado eh: %d", add); break;
+   case 2:
+       printf ("Subtracao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num, &num2);
+       sub= num - num2;
+       printf("O resultado eh: %d", sub); break;
+   case 3:
+       printf ("Multiplicacao selecionada. Selecione dois numeros: ");
+       scanf ("%d %d", &num, &num2);
+       multi= num * num2;
+       printf("O resultado eh: %d", multi); break;
+   case 4:
+    printf ("Divisao selecionada. Selecione dois numeros: ");
+    scanf ("%d %d", &num, &num2);
+    if (num2 == 0) {
+    printf ("A operacao nao eh valida."); break;
+    } else {
+        divi= num/num2;
+        printf ("O resultado eh: %d", divi);
+   } break;
+   default: printf ("Numero invalido."); break;
+}
+    return 0;
+}
+Ex 22: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int idade, tempo, soma;
+   printf ("Apresente a sua idade: ");
+   scanf ("%d", &idade);
+   printf ("Apresente o seu tempo de trabalho em anos: ");
+   scanf ("%d", &tempo);
+    if (idade>=65) {
+    printf ("\nAposentadoria elegivel.");
+   }
+   if (tempo>=30){
+   printf ("\nAposentadoria elegivel.");
+   }
+   if (idade>=60 && tempo>=25) {
+   printf ("\nAposentadoria elegivel.");
+   } if(idade<60 && tempo<25) {
+   printf ("\nNao e elegivel a aposentadoria.");
+   }
+    return 0;
+}
+
+Ex 23: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int ano;
+   printf("Apresente um ano: ");
+   scanf ("%d", &ano);
+   if (ano%400 == 0){
+    printf("\nEsse ano e bissexto.");
+   } if (ano%4 == 0 && ano%100 != 0) {
+   printf ("\nEsse ano e bissexto.");
+   } else {
+   printf("\nEsse ano nao e bissexto.");
+   }
+
+    return 0;
+}
+
+Ex 24: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main () {
+   int imp, num, mg, sp, rj, ms;
+   printf ("Apresente um valor de um produto: ");
+   scanf ("%d", &imp);
+   printf ("Digite um numero entre 1 e 4 para escolher a destinacao do produto.");
+   printf("\n 1: Minas Gerais (MG) \n 2: Sao Paulo (SP) \n 3: Rio De Janeiro (RJ) \n 4: Mato Grosso do Sul (MS)\n");
+   scanf("%d", &num);
+
+   switch ( num ) {
+   case 1:
+    mg= (imp * 0.07) + imp;
+    printf ("\nMG selecionado. O valor final do produto com a taxa de imposto eh: %d", mg); break;
+
+   case 2:
+    sp= (imp*0.12) + imp;
+    printf ("\nSP selecionado. O valor final do produto com a taxa de imposto eh: %d", sp); break;
+
+   case 3:
+    rj= (imp*0.15) + imp;
+    printf("\nRJ selecionado. O valor final do produto com a taxa de imposto eh: %d", rj); break;
+
+   case 4:
+    ms= (imp * 0.08) + imp;
+    printf("\nMS selecionado. O valor final do produto com a taxa de imposto eh: %d", ms); break;
+
+   }
+
+    return 0;
+}
+
+Ex 25: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main () {
+       float a, b, c, delta, x1, x2;
+       printf ("Vamos calcular uma equacao do segundo grau. para ax^2+bx+c=0.");
+       printf("\na= ");
+       scanf ("%f", &a);
+       printf("\nb= ");
+       scanf ("%f", &b);
+       printf("\nc= ");
+       scanf ("%f", &c);
+
+       delta= (b*b)-4*(a*c);
+
+       if (delta<0){
+        printf("Nao existe raiz.");
+       }
+       if (delta>0) {
+        x1= (-b -sqrt(delta))/2* a;
+        x2= (-b +sqrt(delta))/2 * a;
+        printf("As raizes sao: %.1f e %.1f", x1, x2);
+       } if (delta == 0){
+       x1= -b/2*a;
+       printf("Raiz unica, que equivale a: %.1f", x1);
+       }
+
+    return 0;
+}
+
+Ex 26: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main () {
+       float gasolina, km, consum;
+       printf("Apresente a distancia em quilometros rodados e a quantidsde de gasolina consumidos em litros: ");
+       scanf("%f %f", &km, &gasolina);
+       consum= km/gasolina;
+
+       if (consum<=8) {
+        printf ("Venda o carro!");
+       } if (consum >8 && consum<14) {
+       printf("Economico!");
+       } if (consum>=14) {
+       printf ("Super Economico!");
+       }
+
+    return 0;
+}
+
+Ex 27: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main () {
+       int idade;
+       printf ("Informe a sua idade: ");
+       scanf("%d", &idade);
+
+       if (idade>=5 && idade<=7) {
+        printf("\nCategoria: Infantil A.");
+       } if (idade >=8 && idade <=10){
+       printf ("\nCategoria: Infantil B.");
+       } if (idade>=11 && idade <=13) {
+       printf ("\nCategoria: Juvenial A.");
+       }
+       if (idade>=14 && idade <= 17) {
+
+        printf ("\nCategorial: Juvenil B.");
+       }
+    if (idade>=18) {
+        printf("\nCategoria: Senior");
+    }
+
+
+       return 0;
+}
+Ex 28: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main () {
+           int num, x, y, z, geo,pond, harm, arit;
+           printf ("Digite tres valores: ");
+           scanf ("%d %d %d", &x, &y, &z);
+           printf ("Digite um numero correspondente a operacao que se deseja realizar. \n1: Media Geometrica. \n2: Media Ponderada. \n3: Media Harmonica. \n4: Media Aritmetica.");
+           scanf ("%d", &num);
+           switch ( num ) {
+           case 1:
+               geo= cbrt((x*y*z));
+               printf ("A media geometrica eh: %d", geo); break;
+           case 2:
+                pond=((1*x)+ (2*y)+(3*z))/3;
+                printf("A media ponderada eh: %d", pond); break;
+           case 3:
+                harm= 1/(1/x)+(1/y)+(1+z);
+                printf("A media harmonica eh: %d", harm); break;
+           case 4:
+                arit= (x+y+z)/3;
+                printf("A media aritmetica eh: %d", arit); break;
+
+           default: printf("Numero invalido."); break;
+           }
+
+       return 0;
+}
+
+Ex 29: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    int resp, acerto;
+    acerto=0;
+
+    printf ("Prova de matematica: \n1: Quanto e 2 + 2? ");
+    scanf ("%d", &resp);
+    if (resp != 4) {
+        printf ("\nResposta errada.");
+    } else {
+        printf ("\nResposta certa.");
+        acerto++;
+    } +
+    printf ("\n2: Quanto eh 10 + 3? ");
+    scanf ("%d", &resp);
+
+    if (resp != 13) {
+        printf ("\nResposta errada.");
+    } else {
+        printf ("\nResposta certa.");
+        acerto++;
+    }
+    printf ("\n3: Quanto eh 49 + 37?");
+    scanf ("%d", &resp );
+
+    if (resp != 86) {
+        printf ("\nResposta errada.");
+    } else {
+        printf ("\nResposta certa.");
+        acerto++;
+    }
+    printf ("\n4: Quanto eh: 50 + 50?");
+    scanf ("%d", &resp);
+
+    if (resp != 100) {
+        printf ("\nResposta errada.");
+    } else {
+        printf ("\nResposta certa.");
+        acerto++;
+    }
+    printf ("\n5: Quanto eh 56 + 24?");
+    scanf ("%d", &resp);
+
+    if (resp!= 80) {
+        printf ("\nResposta errada.");
+    } else {
+        printf ("\nResposta certa.");
+        acerto++;
+    }
+    printf ("\n\nProva finalizada. Quantidade de acertos: %d", acerto);
+
+
+        return 0;
+
+}
+
+
+
+Ex 30: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int numa, numb, numc;
+    printf ("Apresente tres numeros: ");
+    scanf ("%d %d %d", &numa, &numb, &numc);
+
+    if (numa > numb && numb > numc) {
+        printf ("A ordem crescente eh: %d, %d, %d", numc, numb, numa);
+    } if (numb>numa && numa>numc) {
+        printf ("A ordem crescente eh: %d %d %d", numc, numa, numb);
+    } if (numc>numa && numa > numb){
+        printf ("A ordem crescente eh: %d, %d, %d", numb, numa, numc);
+    } if (numc>numb && numb>numa) {
+        printf ("A ordem crescente eh: %d %d %d", numa, numb, numc);
+    }
+     if (numa>numc && numc >numb) {
+        printf ("A ordem crescente eh: %d, %d %d", numb, numc,numa);
+    } if (numb>numc && numc>numa) {
+        printf ("A ordem crescente eh: %d %d %d", numa, numc, numb);
+    }
+    return 0;
+}
+
+Ex 31: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float alt, peso;
+    printf ("Apresente a sua altura e peso: ");
+    scanf ("%f %f",&alt, &peso);
+
+    if (alt <= 1.20 && peso <=60) {
+        printf ("Classificacao: A");
+    } if (alt <= 1.20 && peso > 60 && peso <=90){
+        printf ("Classificacao: D");
+    } if (alt<=1.20 && peso > 90) {
+        printf ("Classificacao: G");
+    } if (alt > 1.20 && alt <=1.70 && peso <= 60 ) {
+        printf ("Classificacao: B");
+    } if (alt > 1.20 && alt <=1.70 && peso > 60 && peso <=90 ) {
+        printf ("Classificacao: E");
+    } if (alt > 1.20 && alt <=1.70 && peso >90) {
+        printf ("Classificacao: H");
+    } if (alt>1.70 && peso<=60) {
+        printf("Classificacao: C");
+    } if (alt> 1.70 && peso > 60 && peso <=90) {
+        printf ("Classificacao: F");
+    } if (alt>1.70 && peso > 90 ){
+        printf ("Classificacao: I");
+    }
+    return 0;
+}
+
+Ex 32: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int num, quant;
+    float cach, baus, bauo, hamb, cheese, suco, refri;
+    printf("Digite um codigo de 100 a 106 para escolher o seu item.\n100: cachorro quente\n101:Bauru Simples\n102:Bauru com Ovo\n103:Hamburger\n104:Cheeseburger\n105:Suco\n106:refri");
+    scanf ("%d", &num);
+    switch ( num ){
+    case 100: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    cach= quant * 1.20; printf ("O valor a ser pago eh: %.2f", cach); break;
+    case 101: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    baus= quant * 1.30; printf("O valor a ser pago eh: %.2f", baus); break;
+    case 102: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    bauo= quant * 1.50; printf("O valor a ser pago eh: %.2f", bauo); break;
+    case 103: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    hamb= quant * 1.20; printf ("O valor a ser pago eh: %.2f", hamb); break;
+    case 104: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    cheese= quant * 1.70; printf("O valor a ser pago eh: %.2f", cheese); break;
+    case 105: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    suco= quant * 2.20; printf ("O valor a ser pago eh: %.2f", suco); break;
+    case 106: printf ("Escolha a quantidade: ");
+    scanf ("%d", &quant);
+    refri= quant * 1.00; printf("O valor a ser pago eh: %.2f", refri); break;
+    default: printf("Numero invalido."); break;
+    }
+    return 0;
+}
+
+Ex 33: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float precoant, preconov, percent;
+    printf ("Apresente u preco de um produto; ");
+    scanf ("%f", &precoant);
+
+    if (precoant <= 50) {
+        percent= 0.05;
+        preconov= precoant * (1 + percent);
+        printf ("O preco novo eh: %.2f", preconov);
+
+    } if (precoant >= 50 && precoant<=100) {
+        percent= 0.1;
+         preconov= precoant * (1 + percent);
+        printf ("O preco novo eh: %.2f", preconov);
+
+    } if (precoant > 100) {
+        percent= 0.15;
+         preconov= precoant * (1 + percent);
+        printf ("O preco novo eh: %.2f", preconov);
+    }
+    if (preconov <=80 ) {
+        printf ("\nBarato!");
+    } else if (preconov > 80 && preconov <= 120) {
+        printf ("\nNormal.");
+    } else if (preconov > 120 && preconov <= 200) {
+        printf ("\nCaro.");
+    } else {
+        printf ("M\nMuito caro!.");
+    }
+
+
+    return 0;
+    }
+
+Ex 34: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float not, falt;
+    printf ("Apresente a nota e o numero de faltas de um aluno:\n ");
+    scanf("%f %f", &not, &falt);
+
+    if (not >= 9.0 && not <=10.0 && falt <= 20){
+        printf ("\nO conceito desse aluno eh: A");
+    }
+    if (not >= 9.0 && not<= 10 && falt > 20 ) {
+        printf ("\nO conceito desse aluno eh: B");
+    }
+    if (not>= 7.5 && not <= 8.9 && falt <= 20) {
+        printf ("\nO conceito desse aluno eh: B");
+    }
+    if (not>= 7.5 && not <= 8.9 && falt > 20) {
+        printf ("\nO conceito desse aluno eh: C");
+    }
+    if (not >= 5.0 && not <= 7.4 && falt <= 20) {
+        printf ("\nO conceito desse aluno eh: C");
+    }
+    if (not >=5.0 && not <= 7.4 && falt > 20) {
+        printf ("\nO conceito desse aluno eh: D");
+    }
+    if (not>= 4.0 && not <= 4.9 && falt <= 20) {
+        printf ("\nO conceito desse aluno eh: D");
+    }
+    if (not >= 4.0 && not <= 4.9 && falt > 20) {
+        printf ("\nO conceito desse aluno eh: E");
+    }
+    if (not >= 0.0 && not <= 3.9 && falt <= 20 ) {
+        printf ("\nO conceito desse aluno eh: E ");
+    } else if (not>= 0.0 && not <=3.9 && falt > 20) {
+        printf ("\nO conceito desse aluno eh: E");
+    }
+   return 0;
+}
+
+Ex 35: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    int dia, mes, ano;
+    printf ("Digite a data de um dia qualquer:\n ");
+    scanf ("%d", &dia);
+    printf ("Digite o mes: ");
+    scanf ("%d", &mes);
+    printf("\nDigite o ano: ");
+    scanf("%d", &ano);
+
+    if (mes<1 || mes>12) {
+        printf ("\nMes invalido.");
+    } else if (dia <1 || dia > 12) {
+        printf ("\nDia invalido.");
+    } else if ( mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+        if (dia> 30) {
+            printf ("\nData invalida.");
+        }  else {
+            printf ("\n Data valida.");
+        }
+    } else if (mes== 2) {
+    if (ano%400==0 && ano%100!=0 ) {
+        if (dia > 29) {
+            printf ("\n Data invalida. ");
+        } else {
+        printf ("\nData valida.");
+        } }else {
+            if (dia > 28) {
+                printf ("\n Data invalida.");
+            } else {
+                printf ("\nData Valida.");
+            }
+        } }else {
+            printf ("\nData valida.");
+        }
+        return 0;
+    }
+
+Ex 36: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float venda, comiss;
+    printf ("Apresente o valor da venda: \n");
+    scanf ("%f", &venda);
+
+    if (venda >= 100000) {
+        comiss= 700 + venda * 0.16;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    } else if (venda < 100000 && venda >= 80000) {
+        comiss= 650 + venda * 0.14;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    } else if (venda < 80000 && venda >= 60000) {
+        comiss= 600 + venda * 0.14;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    } else if (venda < 60000 && venda >= 40000) {
+        comiss= 550 + venda * 0.14;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    } else if (venda > 40000 && venda >= 20000) {
+        comiss= 500 + venda * 0.14;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    } else if (venda < 20000) {
+        comiss= 400 + venda * 0.14;
+        printf ("\nO preco da comissao eh: %.2f", comiss);
+    }
+
+    return 0;
+    }
+
+Ex 37: 
+int main () {
+    int valor, hor, min, hor2, min2, horpart, minpart, tarifa;
+
+    printf ("Apresente a hora da chegada: ");
+    scanf ("%d", &hor);
+    printf ("\nApresente os minutos na hora da chegada: ");
+    scanf ("%d", &min);
+    printf ("\nApresente a hora da partida: ");
+    scanf ("%d", &hor2);
+    printf ("\nApresente os minutos na hora da partida: ");
+    scanf ("%d", &min2);
+    horpart= hor2-hor;
+    minpart= min2-min;
+
+    if (horpart <= 2 && minpart < 60 ) {
+            printf ("\nA tarifa a ser paga eh: R$1.00 ");
+    } else if (minpart >= 61 ) {
+        printf ("\n A tarifa a ser paga eh: R$1.40");
+    } else if (horpart > 2 && horpart <= 4 && minpart <= 60) {
+        printf ("\nA tarifa a ser paga eh: R$1.40");
+    } else if (minpart >= 61) {
+        printf ("\nA tarifa a ser paga eh: R$2.0");
+    } else if (horpart > 4 && horpart >= 5 && minpart <= 60) {
+        tarifa= (horpart - 5) + 2.00;
+        printf ("\nA tarifa a ser paga eh: R$%d", tarifa);
+    }
+
+
+
+    return 0;
+}
+
+Ex 38: #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main () {
+    int dia, mes, ano, anoatual=2022;
+    printf ("Apresente a dia da data do seu nascimento: ");
+    scanf ("%d", &dia);
+    printf ("\nApresente o mes da data do seu aniversario (numero):");
+    scanf("%d", &mes);
+    printf ("\nApresente o ano do seu aniversario: ");
+    scanf ("%d", &ano);
+
+
+   if (dia > 31) {
+        printf ("Data invalida.");
+    } if (mes == 2 && dia > 28) {
+        printf("\nData invalida!");
+    } if (mes == 2 && ano%400==0 || ano%4==0 && ano%100 !=0 && dia>29) {
+        printf ("Data invalida!");
+    } else if (mes == 2 && ano%400==0 || ano%4==0 && ano%100 !=0 && dia < 29) {
+        printf ("Data valida.");
+    } if (mes == 4 && mes && 6 && mes == 9 && mes == 11 && dia <= 30 ) {
+        printf ("Data valida!");
+    } if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia > 30 ) {
+        printf ("Data invalida.");
+    } if ( mes >= 0 && mes >= 13) {
+        printf ("Data invalida.");
+    }  if (ano>=anoatual) {
+        printf ("Data invalida.");
+    }
+    return 0;
+}
+
+Ex 39: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float sal, temp, salfin, bonus;
+    printf ("Apresente o valor do salario de um funcioario: ");
+    scanf ("%f", &sal);
+    printf ("\nApresente o tempo de servico desse funcionario em anos: ");
+    scanf ("%f", &temp);
+
+    if (sal <= 500.00 && temp <= 1) {
+        bonus= 0;
+        salfin= sal * 1.25 + bonus;
+        printf ("\nO salario desse funcionario com o aumento sera: %.2f", salfin);
+    } else if (sal <= 1000.00 && temp <= 3) {
+        bonus= 100;
+        salfin= sal * 1.20 + bonus;
+        printf ("\nO salario desse funcionario com o aumento sera: %.2f", salfin);
+    } else if (sal <= 1500.00 && temp <= 6) {
+        bonus= 200;
+        salfin= sal * 1.15 + bonus;
+        printf("\nO salario desse funcionario com o aumento sera:  %.2f", salfin);
+    } else if (sal <= 2000.00 && temp <= 10 ) {
+        bonus= 300;
+        salfin= sal * 1.10 + bonus;
+        printf ("\nO salario desse funcionario com o aumento sera: %.2f", salfin);
+    } else if (sal > 2000.00 && temp > 10 ) {
+        bonus= 500;
+        salfin= sal + bonus;
+        printf ("\nO salario desse funcionario com o aumento sera: %.2f", salfin);
+
+    }
+
+    return 0;
+}
+
+Ex 40: #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+    float custofabrica,comissao,imposto,custoconsum;
+    printf("Apresente o custo da fabrica: ");
+    scanf ("%f", &custofabrica);
+
+    if (custofabrica<=12000) {
+        comissao= 0.05;
+        imposto= 0;
+    } else if (custofabrica <= 25000) {
+        comissao= 0.10;
+        imposto= 0.15;
+    } else if (custofabrica > 25000) {
+        comissao= 0.15;
+        imposto= 0.20;
+    }
+    custoconsum= custofabrica * (1+comissao+imposto);
+    printf ("O custo ao consumidor eh: %.2f", custoconsum);
+
+    return 0;
+}
+ 
