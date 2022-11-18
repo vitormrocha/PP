@@ -1,0 +1,521 @@
+Ex 1:
+#include <stdio.h>
+
+int main()
+{
+    int mult=0, num=3;
+    while (mult<5) {
+
+        printf ("%d\n", num);
+        num= num + 3;
+        mult= mult + 1;
+    }
+    return 0;
+}
+ 
+Ex 2: #include <stdio.h>
+
+int main() {
+    int cont=0, num=0; 
+ 
+    while (cont<=100) {
+        printf ("[%d]\n", num);
+        num++;
+        cont++;
+        
+    } cont=0;
+    num=0;
+    
+    do {
+        num= num + 1; 
+        cont= cont + 1;
+        printf ("(%d)\n", num); 
+    } while (cont<=100);
+    
+    cont=0;
+    num=0;
+    
+    for (cont=0; cont <=100; cont++) {
+        printf ("%d\n", cont); 
+        
+    }
+    
+    
+    return 0;
+}
+
+Ex 3:#include <stdio.h>
+
+int main() {
+    int cont=0, num=11; 
+ 
+    while (cont<10) {
+       num= num-1;
+       cont= cont +1; 
+       printf ("%d\n", num );
+      
+    }
+    printf("FIM!");
+    return 0;
+}
+
+Ex 4: #include <stdio.h>
+
+int main() {
+    int num; 
+ 
+    for (num=0; num <= 100000; ) {
+        num= num + 1000;
+    printf ("%d\n", num); 
+    } 
+    return 0;
+}
+
+Ex 5: #include <stdio.h>
+
+int main() {
+    int num=0, num2=0, cont=0, soma=0; 
+    while (cont<10) {
+        printf("\nDigite um numero: ");
+        scanf("%d", &num); 
+        soma= soma + num;
+        cont++;
+    }
+    printf("\nA soma desses dois numeros eh: %d", soma);
+    return 0;
+}
+
+Ex 6:  
+#include <stdio.h>
+
+int main() {
+    int num=0, cont=0;
+    float media=0;
+    while (cont<10) {
+        printf("\nDigite um numero: ");
+        scanf("%d", &num); 
+        media=media + num;
+        cont++;
+    }
+    printf("\nA soma desses dois numeros eh: %.1f", media/10);
+    return 0;
+}
+
+Ex 7: #include <stdio.h>
+
+int main() {
+    int num=0, cont=0;
+    float media=0;
+    while (cont<10) {
+        printf("\nDigite um numero: ");
+        scanf("%d", &num); 
+        if (num>0) {
+           media= media + num;  
+           cont++; 
+        }
+    }
+    printf("\nA soma desses dois numeros eh: %.1f", media/10);
+    return 0;
+}
+
+Ex 8: 
+
+Ex 9: #include <stdio.h>
+
+int main() {
+    int num=0, imp=1, cont=0;
+    printf ("Apresente um numero: ");
+    scanf("%d", &num); 
+    
+    while (cont<num) {
+        imp= imp +2; 
+        printf("%d\n", imp);
+        cont++; 
+        
+    }
+    return 0;
+}
+
+Ex 10: #include <stdio.h>
+
+int main() {
+   int par=0, cont=0, result=0; 
+    while (cont < 50) {
+        par=par + 2;
+        result=result+par;
+        cont++; 
+    }
+    printf("A soma dos 50 primeiros numeros pares eh: %d", result); 
+    return 0;
+}
+
+Ex 11: #include <stdio.h>
+
+int main() {
+    int pos=0, cont=0;
+    
+    printf("Digite um numero: ");
+    scanf("%d", &pos);
+    
+    while (cont < pos+ 1) {
+    cont++;  
+        printf("%d\n", cont); 
+    } 
+
+    return 0;
+}
+
+Ex 12: 
+#include <stdio.h>
+
+int main() {
+    int num=0, cont, result=0;
+    
+    printf("Apresente um numero: ");
+    scanf("%d", &num); 
+    
+    for(cont=1; cont<=(num-1); cont++){
+    if (num%cont == 0 ) {
+        result= result + cont; 
+    }
+    } printf("\nA soma dos divisores desse numero e igual a: %d", result); 
+
+    return 0;
+}
+
+Ex 13: 
+#include <stdio.h>
+
+int main() {
+    int cont, result=0;
+    
+    
+    for(cont=1; cont<=1000; cont++){
+    if (cont % 3 == 0 || cont%5==0 ) {
+        result= result + cont; 
+    }
+    } 
+    printf("\nA soma de todos os numeros multiplos de 3 e 5 abaixo de 1000 sao: %d", result); 
+
+    return 0;
+}
+
+Ex 14: #include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+
+int main() {
+    int dad1, dad2, vezes, cont=0; 
+    
+    printf("Quantas vezes sera lançado os dados?\n");
+    scanf("%d", &vezes); 
+    
+    srand(time(NULL));
+    
+    for(cont=1; cont<=vezes; cont++) {
+        dad1= rand () %6; 
+        dad2= rand() %6; 
+            printf("Lançado: %d: ", cont); 
+            
+            if (dad1>dad2)
+            {
+                printf("D1>D2");
+            }
+            else if (dad1<dad2)
+            {
+                printf("D1<D2"); 
+            }
+        
+        else if (dad1==dad2) {
+            printf("D1=D2!"); 
+        }
+    }
+
+    return 0;
+}
+
+Ex 15: #include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+#include <math.h> 
+
+
+int main() {
+    int num, quad, raiz, cubo, cont; 
+    
+    while (num!=0) {
+        
+        printf("\nDigite um numero: "); 
+        scanf("%d", &num);
+        quad= num * num;
+        cubo= num * num * num; 
+        raiz= sqrt(num); 
+        printf("\nEsse numero elevado ao quadrado eh: %d", quad);
+        printf("\nEsse numero elevado ao cubo eh: %d", cubo);
+        printf("\nA raiz quadrada desse numero eh: %d", raiz); 
+        
+        
+    }
+    return 0;
+}
+
+Ex 16: #include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+#include <math.h> 
+
+int main() {
+    float num1, num2;
+    int opcoes = 0;
+    float result = 0;
+    
+    while (opcoes != 5)
+    {
+        printf
+        ("Digite a opção desejada:\n(1)Adição\n(2)Subtração\n(3)Multiplicação\n(4)Divisão\n(5)Saída\n");
+        scanf("%d", &opcoes);
+        
+        
+        if (opcoes == 5)
+        {
+            printf("O código foi finalizado!");
+            break;
+        }
+        
+        
+        printf("Agora digite 2 números para fazer o cálculo: ");
+        scanf("%f %f", &num1, &num2);
+        
+        switch (opcoes)
+        {
+            case 1:
+            printf("A soma dos números é: %.0f\n", num1 + num2);
+            break;
+            case 2:
+            printf("A subtração dos números é: %.0f\n", num1 - num2);
+            break;
+            case 3:
+            printf("A multiplicação dos números é: %.0f\n", num1 * num2);
+            break; 
+            case 4:
+            printf("A divisão dos números é: %.2f\n", num1 / num2);
+            break;
+        }
+    }
+    return 0;
+}
+
+Ex 17: 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+#include <math.h> 
+
+int main() {
+    int chico= 150, ze= 110, anos=0; 
+    
+    while (chico!=ze) {
+        chico= chico +2; 
+        ze= ze + 3; 
+        anos++; 
+    
+    } 
+    printf ("Em %d anos Ze ficara maior que chico.", anos + 1);
+    return 0;
+} 
+
+Ex 18: #include <stdio.h>
+
+int main() {
+    double salario=2000; 
+    float ano, aumento=1.15; 
+    
+    for (ano=1995; ano <= 2022; ano++) {
+        aumento= aumento * 2; 
+        salario= salario * aumento; 
+    }
+    printf ("\nO salario que esse funcionario recebe em 2022 eh: %d", salario); 
+    
+
+    return 0;
+}
+
+Ex 19: #include <stdio.h>
+
+int main()
+{
+    int saque, nota = 100, cont;
+
+    printf("Digite o valor do saque: ");
+    scanf("%d", &saque);
+
+
+    for (cont = 1; cont <= 7; cont++)
+    {
+        printf("\nSera entregue %d notas de %d\n", saque / nota, nota);
+        saque = saque % nota;
+        switch(cont)
+        {
+            case 1: nota = 50;
+            break;
+
+            case 2: nota = 20;
+            break;
+
+            case 3: nota = 10;
+            break;
+
+            case 4: nota = 5;
+            break;
+
+            case 5: nota = 2;
+            break;
+
+            case 6: nota = 1;
+            break;
+        }
+
+    }
+
+
+    return 0;
+}
+
+Ex 20: #include <stdio.h>
+
+int main() {
+    
+    int num = 2, result = 0, cont = 0, divisao = 0, alcance = 0, soma = 0;
+    
+    printf("Digite um numero que seja diferente de 0 e 1 para saber se ele e primo: \n");
+    scanf("%d", &alcance);
+    
+    inicio:
+    if (num <= alcance)
+    {
+        for (cont = 2; cont < num; cont++)
+        {
+            result = 0;
+            divisao = num % cont;
+            if (divisao == 0)
+            {
+                result = result + 1;
+                break;
+            }
+        }
+        
+        if (result == 1)
+            printf("");
+            
+        if (result == 0)
+        {
+            printf("O numero selecionado (%d) e primo!\n", num);
+            soma = soma + num;
+        }
+           
+
+        num++;
+        goto inicio;
+    }
+    printf("A soma dos primos é: %d", soma);
+        
+    return 0;
+}
+
+Ex 21: #include <stdio.h>
+
+int main() {
+    
+    int num = 0, result= 0, cont = 0, divisao = 0, alcance = 0, soma = 0, aumento = 0;
+    
+    printf("Digite um intervalo para saber quantos primos existem: \n");
+    scanf("%d %d", &aumento, &alcance);
+    
+    inicio:
+    if (aumento <= alcance)
+    {
+        for (cont = 2; cont <  aumento; cont++)
+        {
+            result = 0;
+            divisao = (num + aumento) % cont;
+            if (divisao == 0)
+            {
+                result = result + 1;
+                break;
+            }
+        }
+        
+        if (result == 1)
+            printf("");
+            
+        if (result == 0)
+        {
+            soma = soma + 1;
+        }
+           
+        aumento++;
+        goto inicio;
+    }
+    printf("A quantidade de numeros primos e: %d", soma);
+        
+    return 0;
+}
+
+Ex 22: #include <stdio.h>
+#include <math.h>
+
+int main (){
+    int num1,num2,invert,algarismo,result = 0;
+
+    for (num1 = 999; num1 >= 100; num1--)
+    {
+        for (num2 = num1; num2 >= 100; num2--)
+        {
+            algarismo = num1 * num2;
+            while (algarismo != 0)
+            {
+                invert = invert * 10 + (num1 * num2) % 10;
+                algarismo = algarismo / 10;
+            }
+            if (invert == (num1 * num2))
+            {
+                printf("O maior palíndromo é %d x %d = %d", num1, num2, num1 * num2);
+                result++;
+                break;
+            }
+            invert = 0;
+        }
+
+        if (result == 1)
+            break;
+
+    }
+    return 0;
+}
+
+Ex 23:  #include <stdio.h>
+#include <math.h>
+
+int
+main()
+{
+    int linhas, cont, vx;
+    char letra = 65;
+    printf("Digite a quantidade de linhas desejada: \n");
+    scanf("%d", &linhas);
+
+    for (vx = 1; vx <= linhas; vx++)
+    {
+        for (cont = 1; cont <= vx; cont++)
+        {
+            printf("%c ", letra);
+            if (letra == 90)
+                letra = 64;
+            letra = letra + 1;
+            
+        }
+        printf("\n");
+
+    }
+    return 0;
+}
