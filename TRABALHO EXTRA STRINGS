@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char cebolinha[200], ceb[200];
+    int i, j; 
+    
+    printf("Apresente uma frase: ");
+    fgets(cebolinha, 200, stdin); 
+    
+    for (i=0, j=0; cebolinha[i]!= '\n'; i++, j++) {
+        
+        if((cebolinha[i]=='r'&& cebolinha[i+1]==' ') ||(cebolinha[i]=='R'&& cebolinha[i+1]==' ')) {
+            ceb[j]='r'; 
+        }
+        else if((cebolinha[i]=='r'&& cebolinha[i+1]=='r') || (cebolinha[i]=='R'&& cebolinha[i+1]=='R')) {
+            ceb[j]='l'; 
+            i++;
+        }
+        else if (cebolinha[i]=='r' || cebolinha[i]=='R') {
+            ceb[j]='l'; 
+        }
+        else {
+            ceb[j]=cebolinha[i]; 
+        }
+    }
+    ceb[j]='\0'; 
+    
+     printf("A frase digitada foi:\n%s", ceb); 
+
+    return 0;
+}
