@@ -536,7 +536,7 @@ int main() {
                   fflush(stdin);
                   fgets (strS1, 20, stdin); 
                   printf ("Apresente uma nova string: ");
-                  fgets (strS2, 20, stdin); 
+                  scanf("%20[^\n]", strS2); 
                   strcat(strS1, strS2); 
                   printf("%s", strS1); break; 
                   
