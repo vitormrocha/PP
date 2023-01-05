@@ -118,7 +118,44 @@ int main () {
 
 }
 
-Ex 6: ***
+Ex 6: #include <stdio.h> 
+
+/*
+Leia 10 números inteiros e armazene em um vetor. Em seguida escreva os elementos que 
+são primos e suas respectivas posições no vetor.
+
+*/
+
+int main (){
+    int i, j, valor;
+    int vetor[10];
+
+        for (i=0;i<10; i++){
+        printf("Apresente um numero inteiro para a posicao (%d) de um vetor:", i);
+        scanf("%d", &vetor[i]);
+        printf("\n"); 
+        }
+        
+		
+
+        for (i = 0; i < 10; i++){
+    
+
+            for (j = 2; j < vetor[i]; j++){
+                if(vetor[i] % j == 0){
+                    valor++;
+                }
+            }
+
+            if (valor == 0)
+            printf("O numero %d eh primo, na posicao %d\n", vetor[i], i);
+
+        }
+    
+
+
+    return 0;
+}
 
 Ex 7: #include <stdio.h> 
 /*
@@ -424,7 +461,54 @@ int main()
     return 0; 
 }
 
-Ex 7: 
+Ex 7: #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/*
+Faça um programa para gerar automaticamente números entre 0 e 99 de uma cartela de bingo. Sabendo que cada cartela deverá conter 
+5 linhas de 5 números, gere estes dados de modo a não ter números repetidos dentro das cartelas. O programa deve exibir na tela a 
+cartela gerada.
+*/
+
+int main(){
+    int matriz[5][5] = {}, vet[25], num=0, val=0, val1=0, val2=0, val3=0, i, j;
+    srand(time(NULL));
+    
+    for (val3 = 0; val3 < 25; val3++){
+        do{
+            vet[val3] = (rand() % 100);
+
+            num= 0;
+
+            for (int c1 = 0; c1 < val2; c1++){
+                if (vet[val1] == vet[val2]){
+                    num++;
+                }
+            }
+
+        }
+        while(num != 0);
+        val2++;
+    }
+    
+    for (i = 0; i < 5; i++){
+        for (j = 0; j < 5; j++){
+           matriz[i][j] = vet[val];
+            val++;
+        }
+    }
+
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+            printf("%d", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+
+return 0;
+}
 
 Ex 8:  #include <stdio.h> 
 /*
@@ -438,7 +522,7 @@ d) imprimir as matrizes
 
 
 int main () {
-    int matriz[2][2], i, j, matriz2[2][2], p, o, opcao, VetorSoma[2][2], y, z; 
+    int matriz[2][2], i, j, matriz2[2][2], opcao, VetorSoma[2][2], y, z; 
 
     
         for (i=0;i<2;i++) {
@@ -448,10 +532,10 @@ int main () {
 
             }
         }
-        for (p=0;p<2;p++) {
-            for (o=0;o<2;o++) {
-                printf("Apresente um numero para uma segunda matriz. MATRIZ2 [%d] [%d]: ", p, o);
-                scanf("%d", &matriz2[p][o]); 
+        for (i=0;i<2;i++) {
+            for (j=0;j<2;j++) {
+                printf("Apresente um numero para uma segunda matriz. MATRIZ2 [%d] [%d]: ", i, j);
+                scanf("%d", &matriz2[i][j]); 
             }
         }
 
@@ -463,16 +547,51 @@ int main () {
     
     switch (opcao) {
         case 1: 
-            for ()
+            for (i=0; i<2; i++) {
+                for (j=0; i<2; i++) {
+                    VetorSoma[i][j]= matriz[i][j] + matriz2[i][j]; 
+                }
+            }
+            
+            //Imprimindo
+            for(i=0; i<2; i++) {
+                for (j=0; j<2; j++) {
+                    printf("%d", VetorSoma[i][j]); 
+                }
+            } break; 
+            
+       case 2:
+       for (i=0; i<2; i++) {
+                for (j=0; i<2; i++) {
+                    VetorSoma[i][j]= matriz[i][j] - matriz2[i][j]; 
+                }
+            }
+            
+            //Imprimindo
+            for(i=0; i<2; i++) {
+                for (j=0; j<2; j++) {
+                    printf("%d", VetorSoma[i][j]); 
+                }
+            } break; 
 
-
-
-
-        printf("A soma eh: %d", VetorSoma[y][z]); break; 
-        case 2:  
-        printf("A subtracao eh: %d", matriz[i][j] - matriz2[p][o]); break; 
         case 3: 
-        printf ("N sei");
+        int linha=0, coluna=0, num2=0; 
+        
+        printf("Apresente a linha que voce quer modificar: ");
+        scanf("%d", &linha): 
+        
+           printf("Apresente a coluna que voce quer modificar: ");
+            scanf("%d", &coluna);
+
+            printf("Apresente um numero: ");
+            scanf("%d", &num2);
+
+            matriz[linha][coluna] = num2;
+            
+            matriz_2[linha][coluna] = num2;
+
+            printf("\n");
+        
         case 4: printf("Imprimindo a primeira matriz. \n"); 
         for (i=0; i<2; i++) {
             for (j=0; j<2; j++) {
@@ -482,7 +601,7 @@ int main () {
         } printf ("\nImprimindo a segunda."); 
             for (p=0; p<2; p++) {
                 for (o=0;o<2;o++) {
-                    printf("\n%d", matriz2[p][o]); 
+                    printf("\n%d", matriz2[i][j]); 
                 }
             } break; 
         
