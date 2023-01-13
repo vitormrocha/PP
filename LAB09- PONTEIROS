@@ -1,0 +1,1308 @@
+Ex1: #include <stdio.h> 
+
+
+
+/*
+Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro,
+real e char. Associe as variáveis aos ponteiros (use &). Modifique os valores de cada variável
+usando os ponteiros. Imprima os valores das variáveis antes e após a modificação.
+
+*/
+
+int main (){
+ 
+
+   int num, *p; 
+   float num2, *f; 
+   char let, *l;  
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &num); 
+
+   printf("Apresente um valor real: "); 
+   scanf("%f", &num2); 
+ 
+   printf("Apresente uma letra: "); 
+   scanf(" %c", &let); 
+
+   printf("Antes da modificacao: \n%d \n%f \n%c", num, num2, let); 
+
+   p= &num;
+   f= &num2; 
+   l= &let; 
+
+   printf("\nApos modificacao: \n%d \n%f \n%c", *p+ 1, *f+ 1, *l+ 1);   
+
+
+    return 0;
+}
+
+Ex 2: #include <stdio.h> 
+
+
+
+/*
+Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba 
+o maior endereço.
+*/
+
+int main (){
+ 
+
+   int num, num2, *p, *f; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &num);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &num2); 
+
+   p= &p; 
+   f= &f;  
+
+  
+  
+   if (*p > *f) {
+    printf("O endereco do primeiro valor eh maior. (%d)", *p); 
+   }
+   else {
+    printf("O endereco do segundo valor eh maior: (%d)", *f); 
+   }
+
+
+    return 0;
+}
+
+Ex 3: #include <stdio.h> 
+#include <string.h> 
+
+
+/*
+Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. 
+Em seguida, compare seus endereços e exiba o conteúdo do maior endereço.
+*/
+
+int main (){
+ 
+
+   int num, num2; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &num);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &num2); 
+
+    if (&num > &num2) {
+    printf("O endereco do primeiro valor eh maior. O seu conteudo eh: %d \nO seu endereco eh: %d", num, &num); 
+   }
+
+   else {
+    printf("O endereco do segundo valor eh maior. O seu conteudo eh: %d\nO seu endereco eh: %d", num2, &num2); 
+   }
+
+
+    return 0;
+}
+
+Ex4: #include <stdio.h> 
+ 
+
+
+/*
+Faça um programa que leia 2 valores inteiros e chame uma função que receba estas 2 
+variáveis e troque o seu conteúdo, i.e., esta função é chamada passando duas variáveis A e 
+B, por exemplo, e após a execução da função, A conterá o valor de B e B terá o valor de A
+*/
+
+int main (){
+ 
+
+   int numA, numB; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &numA);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &numB);  
+
+   troca(&numA, &numB); 
+
+   printf("Os valores foram trocados. \nResultado: Primeiro Numero: %d Segundo numero: %d", numA, numB); 
+
+    return 0;
+}
+
+void troca (int *p, int *f) {
+    int troc; 
+   troc= *p; 
+   *p= *f; 
+   *f= troc;  
+    
+}
+
+Ex 5: #include <stdio.h> 
+
+
+
+/*
+Faça um programa que leia dois valores inteiros e chame uma função que receba estes 2
+valores de entrada e retorne o maior valor na primeira variável e o menor valor na segunda 
+variável. Escreva o conteúdo das 2 variáveis na tela.
+
+*/
+
+int main (){
+ 
+
+   int num, num2; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &num);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &num2);  
+
+   retorna(&num, &num2); 
+
+   printf("O numero maior eh: %d\nE o menor numero eh: %d", num, num2); 
+
+   
+
+    return 0;
+}
+
+int retorna (int *p, int *f) {
+   int maior; 
+
+   if (*p > *f) {
+    maior= *p;
+    *p= *f; 
+    *f= maior; 
+   } 
+   else {
+    maior=*f; 
+    *f=*p;
+    *p=maior;
+
+   }
+    
+}
+
+Ex6: #include <stdio.h> 
+
+
+
+/*
+Elaborar um programa que leia dois valores inteiros (A e B). Em seguida faça uma função
+que retorne a soma do dobro dos dois números lidos. A função deverá armazenar o dobro
+de A na própria variável A e o dobro de B na própria variável B.
+*/
+
+int main (){
+ 
+
+   int numA, numB, result; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &numA);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &numB);  
+
+   result= mult(&numA, &numB); 
+
+   printf("A soma do dobro dos dois numeros lidos eh: %d", result); 
+
+   
+
+    return 0;
+}
+
+int mult (int *p, int *f) {
+   int dobro, dob1, dob2; 
+   dob1= *p + *p; 
+   dob2= *f + *f; 
+   dobro= dob1 + dob2; 
+   return dobro; 
+    
+}
+
+Ex7: #include <stdio.h> 
+
+
+
+/*
+Crie um programa que contenha uma função que permita passar por parâmetro dois
+números inteiros A e B. A função deverá calcular a soma entre estes dois números e
+armazenar o resultado na variável A. Esta função não deverá possuir retorno, mas deverá
+modificar o valor do primeiro parâmetro. Imprima os valores de A e B na função principal.
+*/
+
+int main (){
+ 
+
+   int numA, numB, variA; 
+    
+
+   printf("Apresente um valor inteiro: "); 
+   scanf("%d", &numA);
+
+   printf("Apresente outro valor inteiro: "); 
+   scanf("%d", &numB);  
+
+   variA= soma(&numA, &numB); 
+
+   printf("A soma dos dois numeros apresentados eh: %d\nOs numeros que voce apresentou foram: %d e %d", variA, numA, numB); 
+
+   
+
+    return 0;
+}
+
+int soma (int *p, int *f) {
+   int som; 
+   som= *p + *f; 
+   
+    
+}
+
+Ex8: #include <stdio.h> 
+
+/*
+Crie um programa que contenha um array de float contendo 10 elementos. Imprima o
+endereço de cada posição desse array
+*/
+
+int main (){
+ 
+
+   float vetor[10]; 
+   int i; 
+
+   for (i=0; i<10; i++) {
+    printf("Apresente um elemento de um vetor. POSICAO %d\n", i);
+    scanf("%f", &vetor[i]); 
+    printf("Endereco: %d \n", &vetor[i]);    
+   }
+
+   printf("\nConcluido."); 
+  
+
+    return 0;
+}
+
+Ex9: #include <stdio.h> 
+
+/*
+Crie um programa que contenha uma matriz de float contendo 3 linhas e 3 colunas. Imprima 
+o endereço de cada posição dessa matriz.
+*/
+
+int main () {
+ 
+
+   float matriz[3][3]; 
+   int i, j; 
+
+   for (i=0; i<3; i++) {
+     for (j=0; j<3; j++) {
+        printf("Apresente o valor de uma matriz. [%d] [%d] \n", i, j);
+        scanf("%f", &matriz[i][j]); 
+        printf("Endereco dessa posicao: %d \n", &matriz[i][j]); 
+     }
+     printf("\n"); 
+   }
+
+   printf("\nConcluido."); 
+  
+
+    return 0;
+}
+
+Ex 10: #include <stdio.h> 
+
+/*
+Crie um programa que contenha um array de inteiros contendo 5 elementos. Utilizando
+apenas aritmética de ponteiros, leia esse array do teclado e imprima o dobro de cada valor 
+lido.
+
+*/
+
+int main () {
+ 
+
+   int vetor[5], *p, i; 
+   
+   for (i=0; i<5; i++) {
+    printf("Apresente o conteudo de um vetor. Posicao [%d]\n", i);
+    scanf("%d", &vetor[i]);  
+    printf("Endereco da posicao [%d]: %d", i, p+i); 
+    printf("\n"); 
+   }
+    p= &vetor;                   
+    printf("\n\nImprimindo o dobro do conteudo de cada posicao desse vetor: \n");
+    for(i=0; i<5; i++) {
+        printf("\n%d", *(p+i) * 2);  
+    }
+
+  
+
+    return 0;
+}
+
+Ex11: #include <stdio.h> 
+
+/*
+Crie um programa que contenha um array contendo 5 elementos inteiros. Leia esse array
+do teclado e imprima o endereço das posições contendo valores pares.
+
+*/
+
+int main () {
+ 
+
+   int vetor[5], *p, i; 
+   
+   for (i=0; i<5; i++) {
+    printf("Apresente o conteudo de um vetor. Posicao [%d]\n", i);
+    scanf("%d", &vetor[i]);  
+    p=&vetor[i]; 
+    if (*p % 2 == 0) {
+        printf("Esse endereco eh par. \nEndereco: %d", p); 
+    }
+    else {
+        printf("Esse endereco nao eh par."); 
+    }
+    printf("\n"); 
+   }
+    
+
+
+  
+
+    return 0;
+}
+
+Ex12: #include <stdio.h> 
+
+/*
+Faça um programa que leia três valores inteiros e chame uma função que receba estes 3
+valores de entrada e retorne eles ordenados, ou seja, o menor valor na primeira variável, o 
+segundo menor valor na variável do meio, e o maior valor na última variável. A função deve 
+retornar o valor 1 se os três valores forem iguais e 0 se existirem valores diferentes. Exibir 
+os valores ordenados na tela.
+
+
+*/
+
+int ordem (int *vetor);
+
+int main () {
+    int vetor[3], *p; 
+    int i, result; 
+
+    for (i=0; i< 3; i++) {
+        printf("Apresente um valor: ");
+        scanf("%d", &vetor[i]); 
+    }
+
+    p= (int *) malloc (3 * sizeof(int)); 
+
+    for (i=0; i< 3; i++) {
+        *(p + i) = vetor[i]; 
+    }
+
+    result= ordem(p); 
+    if (result == 0) {
+        printf("\nValores iguais");
+    }
+    if (result==1) {
+        printf("\nValores diferentes"); 
+    }
+
+    return 0;
+}
+
+int ordem (int *vetor) {
+    int i; 
+    int *maior; 
+    int *medio; 
+    int *menor; 
+    
+    maior= *(vetor + 0); 
+    menor= *(vetor + 0); 
+    medio= *(vetor + 1);  
+    
+    printf("\n\n"); 
+    for (i=0; i<3; i++ ) {
+        if (*(vetor + i) > maior) {
+            maior= *(vetor + i); 
+        }
+        if (*(vetor + i) < menor) {
+            menor= *(vetor + i); 
+        }
+        if (*(vetor + i) == medio) {
+            medio= *(vetor + i);  
+        }
+
+    }
+    if (maior == menor && maior == medio && menor == medio) {
+        return 0; 
+    }
+    printf("O maior valor eh: %d \nO menor valor eh: %d\nO valor mediano eh: %d", maior, menor, medio);
+    return 1; 
+    
+}
+
+
+
+
+
+Ex 13:#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Elabore uma função que receba duas strings como parâmetros e verifique se a segunda 
+string ocorre dentro da primeira. Use aritmética de ponteiros para acessar os caracteres das 
+strings.
+
+
+*/
+
+int verificar (char *str, char *str2, int tam, int tam2) {
+    int i, j; 
+    int verf=0, result=0; 
+    
+
+    for (i=0; i<tam; i++) {
+        verf = 0;
+        if ( *(str+i) == *str2 ) {
+            for (j=0; j<tam2; j++ ) {
+                if ( *(str + i + j ) == *(str2 + j) ) {
+                    verf++;
+                } 
+
+            
+
+            }
+        } 
+            if ( verf == tam2 ) {
+
+                result=1; 
+                break;
+            }
+    }
+
+    return result;
+
+} 
+
+
+int main () {
+ 
+
+   char str[50], str2[50]; 
+   int verd, tam, tam2;   
+
+
+   printf("Apresente uma string: ");
+   scanf("%50[^\n]", &str); 
+
+   printf("\nApresente outra string: ");
+   fflush(stdin);
+   scanf("%50[^\n]", &str2); 
+
+    tam= strlen(str); 
+    tam2= strlen(str2);
+
+    verd= verificar(str, str2, tam, tam2); 
+
+    if (verd == 1) {
+        printf("\nA segunda string existe dentro da primeira."); 
+    } 
+    else {
+        printf("\nA seguda string nao existe dentro da primeira."); 
+    }
+
+    
+
+
+    return 0;
+}
+
+Ex 14: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Crie uma função que receba dois parâmetros: um array e um valor do mesmo tipo do array. 
+A função deverá preencher os elementos de array com esse valor. Não utilize índices para 
+percorrer o array, apenas aritmética de ponteiros.
+
+
+*/
+
+void preencher(int *ponteiro, int num);
+
+
+int main () {
+ 
+    int vetor[5], num; 
+    int *p = vetor;
+
+        printf("Apresente um numero: "); 
+        scanf ("%d", &num); 
+
+    preencher(*p, num); 
+
+    printf("\n\nConcluido!.");
+
+   
+    
+
+
+    return 0;
+}
+
+void preencher (int *ponteiro, int num ) {
+    int i; 
+
+    for (i=0; i< 5; i++) {
+        printf("POSICAO [%d]: ", i); 
+        *(ponteiro + i)= num; 
+        printf("%d \n", *(ponteiro+i)); 
+    }
+
+}
+
+
+Ex 15: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Crie uma função que receba como parâmetro um array e o imprima. Não utilize índices para 
+percorrer o array, apenas aritmética de ponteiros.
+
+
+*/
+
+void percorrer(int *pont, int num);
+
+void imprimir (int *pont, int num); 
+
+
+int main () {
+ 
+    int vetor[5], num; 
+    int *p = vetor;
+
+
+    printf("Apresente um numero: "); 
+    scanf("%d", &num);  
+    
+    percorrer(*p, num);
+    imprimir( *p, num);  
+
+
+    printf("\n\nConcluido!.");
+
+   
+    
+
+
+    return 0;
+}
+
+void percorrer (int *pont, int num ) {
+    int i; 
+
+    for (i=0; i< 5; i++) {
+        printf("POSICAO [%d]: ", i); 
+        *(pont + i)= num; 
+        printf("%d \n", *(pont+i)); 
+    }
+
+}
+
+void imprimir (int *pont, int num) {
+    int i;
+
+    printf("\nImprimindo: \n"); 
+    for (i=0; i<5; i++) {
+        printf("%d \n", *(pont + i));
+    }
+}
+
+
+
+Ex 16: #include <stdio.h>
+/* Considere a seguinte declaração: int A, *B, **C, ***D; Escreva um programa que 
+leia a variável ‘a’ e calcule e exiba o dobro, o triplo e o quádruplo desse valor utilizando 
+apenas os ponteiros B, C e D. O ponteiro B deve ser usada para calcular o dobro, C o triplo e 
+D o quádruplo.
+*/ 
+
+int main() {
+    
+    int A; 
+    int *B, **C, ***D;
+
+    printf ("Apresente um valor: "); 
+    scanf("%d", &A); 
+    
+    B= &A; 
+    C= &B; 
+    D= &C; 
+    
+    
+    printf("O dobro eh: %d", *B * 2); 
+    printf("\nO Triplo eh: %d", **C * 3 ); 
+    printf("\nO quadruplo eh: %d", ***D * 4); 
+    
+    return 0;
+}
+
+Ex 17: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Escreva uma função que dado um número real passado como parâmetro, retorne a parte
+inteira e a parte fracionária deste número. Escreva um programa que chama esta função.
+Protótipo:
+void frac(float num, int *inteiro, float *frac);
+
+
+
+*/
+
+void frac(float num, int *inteiro, float *frac);
+
+int main () {
+ 
+    float num;
+    float p;  
+    int f; 
+    
+
+    printf("Apresente um numero: ");
+    scanf("%f", &num);
+    
+
+    frac(num, &f, &p); 
+
+    printf("\n\nConcluido!.");
+
+   return 0;
+}
+
+void frac(float num, int *inteiro, float *frac) { 
+
+    *inteiro= (int) num;  
+    *frac= num - *inteiro;
+
+    printf("A parte fracionaria desse numero eh: %f", *frac); 
+    printf("\nA parte inteira desse numero eh: %d", *inteiro);
+}
+
+
+Ex 18: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+. Implemente uma função que calcule a área da superfície e o volume de uma esfera de raio 
+R. Essa função deve obedecer ao protótipo:
+void calc_esfera(float R, float *area, float *volume);
+A área da superfície e o volume são dados, respectivamente, por:
+A = 4 *  * R2
+V = 4/3 *  * R3
+
+
+
+*/
+
+void calc_esfera(float R, float *area, float *volume);
+
+int main () {
+ 
+    float num, area, volume;
+    
+
+    printf("Apresente o valor de um raio: ");
+    scanf("%f", &num);
+
+
+    calc_esfera(num, &area, &volume); 
+
+    printf("\n\nConcluido!.");
+
+   return 0;
+}
+
+void calc_esfera(float R, float *area, float *volume) {
+    float pi= 3.14; 
+    *area= 4 * pi * R; 
+    *volume= (4/3) * pi * R; 
+
+    printf("A area da superficie desse circulo eh: %f", *area);
+    printf("\nO volume desse circulo eh: %f", *volume); 
+
+}
+
+
+
+Ex 19: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Escreva uma função que aceita como parâmetro um array de inteiros com N valores, e
+determina o maior elemento do array e o número de vezes que este elemento ocorreu no 
+array. Por exemplo, para um array com os seguintes elementos: 5, 2, 15, 3, 7, 15, 8, 6, 15, a 
+função deve retorna para o programa que a chamou o valor 15 e o número 3 (indicando que 
+o número 15 ocorreu 3 vezes). A função deve ser do tipo void.
+
+
+*/
+
+void percorrer (int tamanho, int vetor[tamanho]); 
+
+int main () {
+ 
+    int tamanho, i; 
+
+    printf("Apresente o tamanho de um vetor: "); 
+    scanf("%d", &tamanho);
+
+    int vetor[tamanho];
+
+    for (i=0; i<tamanho; i++) {
+        printf("Apresente o valor de uma posicao [%d] de um vetor: ", i);
+        scanf("%d", &vetor[i]); 
+        printf("\n");
+    } 
+
+    percorrer(tamanho, vetor);  
+
+    return 0;
+}
+
+void percorrer (int tamanho, int *p) {
+   int quant=0; 
+   int *posicao, maior = *p , i; 
+
+
+   for (i=0; i<tamanho; i++) {
+    if (*(p+i) > maior) {
+        maior= *(p+i); 
+    }
+   } 
+     for (i=0 ; i < tamanho; i++) {
+        if (*(p+i) == maior) {
+        quant++; 
+    }
+     }
+
+     
+   printf("\nO maior numero eh: %d\nEle aparece %d vezes.", maior, quant); 
+}
+
+Ex20: #include <stdio.h> 
+#include <stdlib.h> 
+
+/*
+Implemente uma função que receba como parâmetro um array de números reais de
+tamanho N e retorne quantos números negativos há nesse array. Essa função deve obedecer 
+ao protótipo:
+int negativos(float *vet, int N);
+
+*/
+
+int negativos(float *vet, int N);
+
+int main () {
+  
+    int tamanhoN, i, result;
+    float *p;  
+
+    printf("Apresente o tamanho de um vetor: ");
+    scanf("%d", &tamanhoN); 
+
+    p= (float*) malloc(tamanhoN * sizeof(float)); 
+
+    printf("\n"); 
+    for (i=0; i<tamanhoN; i++) {
+        printf("Apresente o valor de uma posicao [%d] de um vetor: ", i); 
+        scanf("%f", &p[i]); 
+
+    } 
+
+    result= negativos(p, tamanhoN); 
+
+    printf("\nExistem %d numeros negativos.", result); 
+
+    return 0;
+}
+
+int negativos(float *vet, int N) {
+    int quant=0, i; 
+
+    for (i=0; i<N; i++) {
+        if (*(vet+i) < 0) {
+            quant++; 
+        }
+    }
+    return quant; 
+
+}
+
+
+
+
+Ex 21: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Escreva um programa que declare um array de inteiros e um ponteiro para inteiros. Associe 
+o ponteiro ao array. Agora, some mais um (+1) a cada posição do array usando o ponteiro 
+(use *)
+
+*/
+
+void somar (int *ponteiro, int vetor);
+
+int main () {
+  
+    int array[5], inteiros, i; 
+    
+
+    for (i=0; i<5; i++) {
+        printf("Apresente um valor para o array. Posicao [%d]: ", i);
+        scanf("%d", &array[i]); 
+        printf("\n"); 
+    }
+
+    printf("Acrescentando 1 a todas as posicoes do array: \n"); 
+    somar (inteiros, &array); 
+
+
+}
+
+void somar (int *ponteiro, int vetor) {
+    int i; 
+    ponteiro = vetor; 
+    
+    for (i=0; i<5; i++ ) {
+        *(ponteiro + i) = *(ponteiro + i) + 1; 
+        printf("%d", *(ponteiro + i)); 
+        printf("\n"); 
+    }
+}
+
+Ex 22: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Crie uma função para somar dois arrays. Esta função deve receber dois arrays e retornar a 
+soma em um terceiro array. Caso o tamanho do primeiro e segundo array seja diferente
+então a função retornará ZERO (0). Caso a função seja concluída com sucesso a mesma deve 
+retornar o valor UM (1). Utilize aritmética de ponteiros para manipulação do array.
+
+*/
+
+int somar (int *ponteiro, int *ponteiro2, int *ponteiro3, int tamanho, int tamanho2);
+
+void imprimir (int *ponteiro, int *ponteiro2, int *ponteiro3, int tamanho, int tamanho2); 
+
+int main () {
+  
+    int tamanho, tamanho2, i, result; 
+    int *p, *f, *k; 
+
+    printf("Apresente o tamanho de um vetor: "); 
+    scanf("%d", &tamanho); 
+
+    printf("Apresente o tamanho de outro vetor: "); 
+    scanf("%d", &tamanho2); 
+
+    p= (int *) malloc (tamanho * sizeof(int)); 
+    f= (int *) malloc (tamanho2  * sizeof(int)); 
+    k= (int *) malloc (tamanho * sizeof(int)); 
+    
+    for (i=0; i<tamanho; i++) {
+        printf("Apresente o valor de um vetor na posicao [%d]: ", i); 
+        scanf("%d", &p[i]); 
+        printf ("\n"); 
+    }
+
+    for (i=0; i<tamanho2; i++) {
+        printf("Apresente o valor de outro vetor na posicao [%d]: ", i);
+        scanf("%d", &f[i]); 
+        printf("\n"); 
+    }
+
+    result= somar(p, f, k, tamanho, tamanho2); 
+
+    if (result==0) {
+        printf("Operacao nao foi feita com sucesso."); 
+    } 
+    else if (result==1) {
+        printf("Operacao foi feita com sucesso!"); 
+        imprimir (p, f, k, tamanho, tamanho2); 
+    }
+
+
+
+    return 0;
+}
+
+int somar (int *ponteiro, int *ponteiro2, int *ponteiro3, int tamanho, int tamanho2) {
+    int i; 
+    int vetoresult;
+
+     
+    
+   
+    if (tamanho != tamanho2) {
+        return 0; 
+    }
+    if (tamanho == tamanho2) {
+        printf("\nSomando os dois arrays. \n"); 
+        for (i=0; i<tamanho; i++) {
+            *(ponteiro3 + i)= *(ponteiro + i) + *(ponteiro2 + i);  
+        }
+ 
+        return 1; 
+    }
+
+}
+
+void imprimir (int *ponteiro, int *ponteiro2, int *ponteiro3, int tamanho, int tamanho2) {
+    int i, vetoresult; 
+
+    printf("\nImprimindo: \n"); 
+    for (i=0; i< tamanho; i++) {
+        *(ponteiro3 + i)= *(ponteiro + i) + *(ponteiro2 + i);
+        printf("%d \n", *(ponteiro3 + i)); 
+    }
+}
+
+
+Ex 23: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Escreva uma função que retorna o maior valor de um array de tamanho N. Escreva um 
+programa que leia N valores inteiros, imprima o array com ‘k’ elementos por linha, e o maior 
+elemento. O valor de ‘k’ também deve ser fornecido pelo usuário
+
+*/
+
+void maior (int *ponteiro, int tamanho);
+
+void imprimir (int *ponteiro, int tamanho, int k ); 
+
+int main () {
+  
+    int tamanhoN, valork, i; 
+    int *p; 
+
+    printf("Apresente o tamanho de um array: ");
+    scanf("%d", &tamanhoN); 
+
+    p= (int *) malloc (tamanhoN * sizeof(int)); 
+
+    for (i=0; i<tamanhoN; i++) {
+        printf("Apresente um valor para um vetor na posicao [%d]: ", i);
+        scanf("%d", &p[i]); 
+        printf("\n"); 
+    }
+    maior (p, tamanhoN); 
+
+    printf("Ate qual valor voce deseja imprimir os conteudos desse vetor? "); 
+    scanf("%d", &valork); 
+
+    imprimir(p, tamanhoN, valork); 
+
+    printf("\nConcluido!"); 
+
+
+    return 0;
+}
+
+void maior (int *ponteiro, int tamanho) {
+    int i, maior=*(ponteiro + 0);
+
+    printf("TESTE\n");
+    for (i=0; i<tamanho; i++) {
+        if (*(ponteiro + i) > maior) {
+            maior = *(ponteiro + i); 
+
+        }
+    } 
+    printf("O maior valor eh: %d\n", maior); 
+}
+
+void imprimir (int *ponteiro, int tamanho, int k) {
+    int i, j; 
+
+    printf("TESTE 2\n"); 
+    for(i = 0; i < tamanho; i++, j++){
+            if(j < k){
+                printf("|%d|", *(ponteiro + i));
+            }
+            else{
+                j = -1;
+                i--;
+                printf("\n");
+            }
+        }
+
+}
+
+
+Ex 24: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+. Escreva uma função que receba um array de inteiros V e os endereços de duas variáveis
+inteiras, min e max, e armazene nessas variáveis o valor mínimo e máximo do array. Escreva 
+também uma função main que use essa função
+
+*/
+
+void receber (int *ponteiro, int v, int min, int max); 
+
+int main () {
+  
+    int tamanhoV, min, max; 
+    int *p;
+
+    receber(*p, tamanhoV, min, max); 
+
+    printf("\nConcluido"); 
+
+
+
+    return 0;
+}
+
+void receber (int *ponteiro, int v, int min, int max) {
+    int i;
+
+    printf("Apresente o tamanho de um array: "); 
+    scanf("%d", &v); 
+
+    ponteiro= (int *) malloc (v * sizeof(int)); 
+
+    for (i=0; i< v; i++) {
+        printf("Apresente um valor para o vetor na posicao [%d]: ", i); 
+        scanf("%d", &ponteiro[i]); 
+        printf("\n"); 
+    }
+    max= *(ponteiro + 0); 
+    min= *(ponteiro + 0); 
+
+    for (i=0; i< v; i++) {
+        if (*(ponteiro + i) > max) {
+            max = *(ponteiro + i); 
+        } 
+        if (*(ponteiro + i) < min ) {
+            min= *(ponteiro + i);  
+        }
+    }
+
+    printf("\nO valor maximo do array: %d\nO valor minimo eh: %d", max, min); 
+
+
+}
+
+
+Ex 25: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+
+/*
+Faça um programa que possua uma função para:
+ ler 2 notas e retorná-las por parâmetro (chamar uma função dedicada a ler 2 notas
+válidas e que devolver os 2 números lidos);
+ calcular a média simples e a média ponderada e retorná-las por parâmetro, onde a
+segunda nota tem peso 2: media_ponderada = (n1 + n2*2)/3
+
+*/
+
+
+
+float obter (float *p); 
+
+int main () {
+  
+    float nota[2]; 
+    float f, *p; 
+
+    p= (float *) malloc (2 * sizeof(float)); 
+
+     
+    obter(p); 
+
+
+
+    return 0;
+} 
+
+float obter (float nota[2]) {
+    float *f, result;  
+    int i, opcao; 
+
+    for (i=0; i<2; i++) {
+        printf("Apresente uma nota: "); 
+        scanf("%f", &nota[i]); 
+    }
+
+     
+
+    f= (float *) malloc (2 * sizeof(float)); 
+
+    for (i=0; i<2; i++) {
+    
+        *(f + i) = nota[i]; 
+        printf("\n%f ", *(f + i)); 
+    }
+
+    
+
+    do {
+        printf("\nMENU \n\n1) Calcular media aritmetica \n2) Calcular media ponderada \n3) Sair. \n");
+        printf("Nota 1: %f Nota 2: %f \n", *(f + 0), *(f + 1));  
+        scanf("%d", &opcao); 
+
+        switch (opcao) {
+            case 1: result = ( *(f + 0) + *(f + 1) ) / 2;  
+            printf("MEDIA ARITMETICA: %f", result ); break; 
+
+            case 2: result= ( *(f + 0) + ( *(f + 1) * 2 ) ) / 3; 
+            printf("MEDIA PONDERADA: %f", result); break; 
+        }
+
+    } while (opcao < 3); 
+}
+
+Ex 26: #include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+#include <math.h> 
+
+/*
+Implemente uma função que calcule as raízes de uma equação do segundo grau do tipo
+Ax2+ Bx + C = 0.
+Lembrando que:
+𝑥 =
+−𝑏 ± √
+2𝑎
+Onde:
+ = 𝑏
+2 − 4𝑎𝑐
+A variável a tem que ser diferente de zero. 
+ Se  < 0, não existe real;
+ Se  = 0, existe uma raiz real;
+ Se   0, existem duas raízes reais.
+Essa função deve obedecer ao seguinte protótipo:
+int raizes(float A, float B, float C, float *X1, float *X2);
+Essa função deve ter como valor de retorno o número de raízes reais e distintas da equação. Se 
+existirem raízes reais, seus valores devem ser armazenados nas variáveis apontadas por X1 e X2
+
+*/
+
+
+
+int raizes(float A, float B, float C, float *X1, float *X2);
+
+int main () {
+  
+   float num, num2, num3, result; 
+   float *p, *f; 
+
+    printf("Apresente o valor de A: ");
+    scanf("%f", &num); 
+
+    printf("Apresente o valor de B: ");
+    scanf("%f", &num2); 
+
+    printf("Apresente o valor de C: "); 
+    scanf("%f", &num3); 
+
+    result= raizes (num, num2, num3, p, f); 
+
+    if (result == 1) {
+        printf("Essa equacao possui uma unica raiz real."); 
+    }
+    if (result == 2) {
+        printf("Essa equacao possui duas raizes reais."); 
+    }
+    if (result == 0) {
+        printf("Essa equacao nao possui raizes reais. "); 
+    }
+
+    
+
+
+
+    return 0;
+} 
+
+int raizes(float A, float B, float C, float *X1, float *X2) {
+
+    float raiz[2]; 
+    float delta;
+
+    delta= (B * B) - (4 * (A * C)); 
+    
+    
+    if (delta < 0) {
+        printf("TESTE");
+        return 0;
+    }
+
+    
+    if (delta == 0) {
+        printf("TESTE2");
+        raiz[0]= (-B + sqrt(delta)) / (2 * A); 
+         *X1= raiz[0]; 
+         printf("UNICA RAIZ \n%f", *X1); 
+         return 1; 
+
+    }
+    
+    if (delta > 0) {
+        printf("TESTE3"); 
+    raiz[0]= (-B + sqrt(delta)) / (2 * A); 
+    raiz[1]= (-B - sqrt(delta)) / (2 * A); 
+
+    *X1= raiz[0]; 
+    *X2= raiz[1]; 
+
+    printf ("DUAS RAIZES REAIS \n%f \n%f", *X1, *X2); 
+
+    return 2; 
+    } 
+}
+
+
+
+
+
+
+
